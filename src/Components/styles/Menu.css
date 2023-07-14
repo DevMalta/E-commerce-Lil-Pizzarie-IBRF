@@ -1,0 +1,43 @@
+.grid {
+    padding-top: 30px;
+  }
+
+.find {
+  display: flex;
+  justify-content: center;
+}
+
+.quantity {
+  display: flex;
+}
+
+.minus,.plus {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count{
+  border-color: blueviolet;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.row1,.row2 {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: left;
+}
+
+.views {
+  border-color: chocolate;
+  display: flex;
+  flex-direction:row-reverse;
+  justify-items: right;
+}
