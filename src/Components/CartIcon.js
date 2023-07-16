@@ -1,14 +1,20 @@
 import React from 'react';
-// import cartIcon from '../assets/cart-icon.png';
 
-function CartIcon() {
+const Cart = ({ items }) => {
   return (
     <div>
-        <h1>Espaço do Carrinho</h1>
-      {/* <img src={cartIcon} alt="Carrinho de Compras" className="cart-icon" /> */}
-      {/* Outras lógicas e elementos relacionados ao carrinho de compras */}
+      <h2>Carrinho de Compras</h2>
+      {items.length === 0 ? (
+        <p>O carrinho está vazio.</p>
+      ) : (
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>{item.name}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
-}
+};
 
-export default CartIcon;
+export default Cart;

@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: #FFA500;
 }
 
 .navbar,
@@ -29,6 +29,7 @@ img {
 
 .login_btn {
   text-align: center;
+  padding-left: 20%;
 }
 
 .login_btn a {

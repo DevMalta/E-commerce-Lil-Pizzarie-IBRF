@@ -5,14 +5,16 @@ import Home from './Components/Home';
 import About from './Components/AboutUs';
 import Contato from './Components/Contato';
 import Menu from './Components/Menu';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
+import Footer from "./common/footer/Footer"
+import Header from "./common/header/Header"
 import Login from './Components/Login';
-import CartIcon from './Components/CartIcon';
+import Cart from "./common/Cart/Cart"
 
 import './App.css';
 
 function App() {
+
+  
   return (
     <Router>
       <Header />
@@ -21,10 +23,13 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/cart" element={<CartIcon />} />
+        {/* <Route path="/cart" element={<CartIcon />} /> */}
         <Route path="/login" element={<Login />} />
+        {/* <Route path="/cart" element={<Cart />} /> */}
+        {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
+
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
