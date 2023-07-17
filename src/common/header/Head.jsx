@@ -12,7 +12,7 @@ const Head = () => {
           <FontAwesomeIcon icon={faEnvelope} />
           <label> lil_pizzarie@vamonessa.com</label>
         </div>
-        <div className='right-row RText'>
+        <div className='right-row-RText'>
           <label>FAQ's</label>
           <label>Precisa de Ajuda?</label>
           <span>🏳️‍⚧️</span>

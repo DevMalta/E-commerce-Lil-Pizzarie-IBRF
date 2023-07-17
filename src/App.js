@@ -8,7 +8,9 @@ import Menu from './Components/Menu';
 import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import Login from './Components/Login';
-import Cart from "./common/Cart/Cart"
+import Cart from "./common/Cart/Cart";
+import Teste from "./Components/Teste";
+
 
 import './App.css';
 
@@ -22,10 +24,10 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contato" element={<Contato />} />
-        <Route path="/menu" element={<Menu />} />
-        {/* <Route path="/cart" element={<CartIcon />} /> */}
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/menu" element={<Menu />} /> */}
         {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/teste" element={<Teste />} />
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
 
       </Routes>

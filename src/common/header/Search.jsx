@@ -28,8 +28,9 @@ const Search = ({ CartItem }) => {
 
           <div className='icon_f_flex_width'>
               <div className="usuario">
-                {/* Link */}
+                <Link to='/login'>
                 <FontAwesomeIcon icon={faUser} />
+                </Link>
               </div>
                           
               <div className="cart">

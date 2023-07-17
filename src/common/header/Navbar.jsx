@@ -47,8 +47,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={toggleMobileMenu}>
-                Por enquanto nada
+              <Link to="/teste" onClick={toggleMobileMenu}>
+                Teste
               </Link>
             </li>
           </ul>
@@ -85,8 +85,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={toggleMobileMenu}>
-              Por enquanto nada
+            <Link to="/teste" onClick={toggleMobileMenu}>
+              Teste
             </Link>
           </li>
         </ul>
