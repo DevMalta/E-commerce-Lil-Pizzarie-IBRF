@@ -1,98 +1,57 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 import './Navbar.css';
 
-const Navbar = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setMobileMenu(!mobileMenu);
+const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* <div className="navbar-logo">
-          <Link to="/" className="navbar-logo-link">
-            Logo
-          </Link>
-        </div> */}
-        <div className={`navbar-menu ${mobileMenu ? 'active' : ''}`}>
-          <ul className="nav-links">
-            <li>
-              <Link to="/" onClick={toggleMobileMenu}>
+        <div className={`menu-btn ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div className="menu-btn-burger"></div>
+        </div>
+        <ul className={`menu ${menuOpen ? 'active' : ''}`}>
+        <li>
+              <Link to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={toggleMobileMenu}>
+              <Link to="/about">
                 Sobre Nós
               </Link>
             </li>
             <li>
-              <Link to="/contato" onClick={toggleMobileMenu}>
+              <Link to="/contato">
                 Contato
               </Link>
             </li>
             <li>
-              <Link to="/menu" onClick={toggleMobileMenu}>
+              <Link to="/menu">
                 Menu
               </Link>
             </li>
             <li>
-              <Link to="/login" onClick={toggleMobileMenu}>
+              <Link to="/login">
                 Login 
               </Link>
             </li>
             <li>
-              <Link to="/teste" onClick={toggleMobileMenu}>
+              <Link to="/teste">
                 Teste
               </Link>
             </li>
-          </ul>
-        </div>
-        <button className="navbar-toggle" onClick={toggleMobileMenu}>
-          <FontAwesomeIcon icon={mobileMenu ? faTimes : faBars} />
-        </button>
-      </div>
-      {mobileMenu && (
-        <ul className="mobile-nav-links">
-          <li>
-            <Link to="/" onClick={toggleMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={toggleMobileMenu}>
-              Sobre Nós
-            </Link>
-          </li>
-          <li>
-            <Link to="/contato" onClick={toggleMobileMenu}>
-              Contato 
-            </Link>
-          </li>
-          <li>
-            <Link to="/menu" onClick={toggleMobileMenu}>
-              Menu 
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" onClick={toggleMobileMenu}>
-              Login 
-            </Link>
-          </li>
-          <li>
-            <Link to="/teste" onClick={toggleMobileMenu}>
-              Teste
-            </Link>
-          </li>
         </ul>
-      )}
+      </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default NavBar;
