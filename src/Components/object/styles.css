@@ -1,0 +1,15 @@
+/* styles.css (ou outro arquivo de estilos) */
+.star-container {
+  display: inline-block;
+}
+
+.star {
+  cursor: pointer;
+  color: gray;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.star.filled {
+  color: gold;
+}

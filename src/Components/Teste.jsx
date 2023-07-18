@@ -3,6 +3,7 @@ import Pesquisa from './componentes_Menu/pesquisa';
 import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Teste.css';
+import StarRating from './object/StarRating';
 import f01 from '../img/flavor01.jpeg';
 import f02 from '../img/flavor02.jpeg';
 import f03 from '../img/flavor03.jpeg';
@@ -16,6 +17,7 @@ import f09 from '../img/flavor09.jpeg';
 // Resto do código do componente Menu
 
 const Menu = () => {
+  
   const [showSecondGrid, setShowSecondGrid] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [images, setImages] = useState([
@@ -100,7 +102,13 @@ const Menu = () => {
       setImages(updatedImages);
     }
   };
-
+  
+  const handleRatingChange = (index, newRating) => {
+    const updatedImages = [...images];
+    updatedImages[index].rating = newRating;
+    setImages(updatedImages);
+  };
+  
   const renderImages = () => {
     const filteredImages = images.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -127,7 +135,7 @@ const Menu = () => {
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-rating">
-                    {/* Aqui você pode usar um componente ou código JavaScript para gerar as estrelas de avaliação */}
+                    <StarRating initialValue={images[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
                   </div>
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
@@ -161,7 +169,7 @@ const Menu = () => {
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-rating">
-                    {/* Aqui você pode usar um componente ou código JavaScript para gerar as estrelas de avaliação */}
+                    <StarRating initialValue={images[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
                   </div>
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
