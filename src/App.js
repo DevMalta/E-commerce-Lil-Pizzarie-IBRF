@@ -31,7 +31,7 @@ function App() {
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
 
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
