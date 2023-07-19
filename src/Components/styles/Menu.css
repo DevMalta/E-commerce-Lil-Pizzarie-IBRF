@@ -108,4 +108,10 @@
       margin: 10px 0;
     }
   }
+
+  .page1{
+    display: flex;
+    justify-content: inline-block;
+    
+  }
   

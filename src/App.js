@@ -8,7 +8,7 @@ import Menu from './Components/Menu';
 import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import Login from './Components/Login';
-import Cart from "./common/Cart/Cart";
+import Cart from "./Components/Cart";
 import Teste from "./Components/Teste";
 
 
@@ -25,7 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/menu" element={<Menu />} />
-        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/teste" element={<Teste />} />
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
