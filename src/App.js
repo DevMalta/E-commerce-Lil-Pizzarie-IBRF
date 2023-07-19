@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Home from './Components/Home';
 import About from './Components/AboutUs';
 import Contato from './Components/Contato';
@@ -8,10 +7,8 @@ import Menu from './Components/Menu';
 import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import Login from './Components/Login';
-import Cart from "./Components/Cart";
+import Cart from "./Components/componentes_Menu/Cart";
 import Teste from "./Components/Teste";
-
-
 import './App.css';
 
 function App() {

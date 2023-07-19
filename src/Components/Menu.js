@@ -20,7 +20,6 @@ const initialImages = [
   { src: f01, name: 'Marguerita', price: '$ 9.99', description: 'Delicious pizza topped with tomato, mozzarella, and basil.' },
   { src: f02, name: 'Exotic', price: '$ 11.99', description: 'An exotic blend of flavors including pineapple, ham, and barbecue sauce.' },
   { src: f03, name: 'Mussarela', price: '$ 8.99', description: 'Classic pizza with melted mozzarella cheese and tomato sauce.' },
-  // { src: f13, name: 'test', price: '$ 8.99', description: 'Classic pizza with melted mozzarella cheese and tomato sauce.' },
   { src: f04, name: 'House special', price: '$ 12.99', description: 'Our special pizza with a combination of various toppings.' },
   { src: f05, name: 'Mexican pepper', price: '$ 10.99', description: 'Spicy pizza with jalapenos, bell peppers, and seasoned ground beef.' },
   { src: f06, name: 'Tomato with Olive', price: '$ 9.99', description: 'Fresh tomato slices and black olives make this pizza a delight.' },
@@ -151,17 +150,17 @@ const Menu = () => {
   return (
     <div className='page1'>
       <>
-                <div className="menu-container">
+        <div className="menu-container">
           <h2 className="menu-title">Escolha sua Lil Pizza</h2>
-        {/* <Pesquisa handleChange={handleSearchChange} /> */}
-        <div className="menu-grid">
-          {renderImages()}
+          {/* <Pesquisa handleChange={handleSearchChange} /> */}
+          <div className="menu-grid">
+            {renderImages()}
+          </div>
+          <button className="toggle-button" onClick={handleToggleGrid}>
+            {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
+          </button>
         </div>
-        <button className="toggle-button" onClick={handleToggleGrid}>
-          {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
-        </button>
-      </div>
-      <div>
+        <div>
           <h1>List</h1>
         </div>
       </>
