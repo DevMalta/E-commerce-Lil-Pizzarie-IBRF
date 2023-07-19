@@ -90,12 +90,7 @@
     font-weight: bold;
     margin: 0 5px;
   }
-  
-  .page1{
-    color: darkgreen;
-    display: flex;
-    justify-content: inline-block;
-  }
+
     
     /* Estilos responsivos */
     @media (max-width: 767px) {

@@ -1,13 +1,28 @@
-import React from 'react';
-import './styles/Teste.css';
+import React, { useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './componentes_Menu/style/Itens.css';
+import StarRating from './object/StarRating';
+import Itens from './itens';
+import Cart from './componentes_Menu/Cart';
 
-function Teste() {
+
+  function Menu() {
+
   return (
-    <div>
-      <h1>Página Teste</h1>
-      
+    <div className='page1'>
+      <>
+        <div className="menu-container">
+          {/* Componente Itens */}
+          <Itens />
+        </div>
+        <div>
+        {/* Componente Cart */}
+        <Cart />
+        </div>
+      </>
     </div>
   );
-}
+};
 
-export default Teste;
+export default Menu;
