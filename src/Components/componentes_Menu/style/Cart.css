@@ -1,0 +1,46 @@
+.buy_list{
+    background-color: green; 
+    padding: 20px;
+}
+
+.buy_list.fixed_cart {
+    position: fixed;
+    top: 215px; /* Defina a distância em relação ao topo que desejar */
+    right: 0; /*Defina a distância em relação à direita que desejar*/
+    width: 300px; /* Defina a largura do elemento fixo */
+    border: 1px solid #ccc; /* Adicione uma borda para ficar mais visível */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adicione sombra para dar destaque */
+  }
+
+  .list_buy_list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .quantity_container {
+    display: flex; /* Isso fará com que os itens se alinhem em linha */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+  
+  .quantity_container button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* Adiciona um espaço entre os botões */
+  }
+  
+  .quantity_container span {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
