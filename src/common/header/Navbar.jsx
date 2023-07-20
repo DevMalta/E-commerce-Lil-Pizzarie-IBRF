@@ -48,6 +48,11 @@ const NavBar = () => {
                 Teste
               </Link>
             </li>
+            <li>
+              <Link to="/user">
+                Usuário
+              </Link>
+            </li>
         </ul>
       </div>
     </nav>

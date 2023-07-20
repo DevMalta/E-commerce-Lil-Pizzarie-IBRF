@@ -6,7 +6,9 @@ import Contato from './Components/Contato';
 // import Menu from './Components/Menu';
 import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
-import Login from './Components/Login';
+import LoginPage from './Components/Login/LoginPage';
+import UserPage from './Components/Login/UserPage';
+
 // import Cart from "./Components/componentes_Menu/Cart";
 import Menu from "./Components/Teste";
 import './App.css';
@@ -23,7 +25,8 @@ function App() {
         <Route path="/contato" element={<Contato />} />
         {/* <Route path="/menu" element={<Menu />} /> */}
         {/* <Route path="/cart" element={<Cart />} /> */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/user" element={<UserPage />} />
         <Route path="/teste" element={<Menu />} />
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
 
