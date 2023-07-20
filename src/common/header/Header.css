@@ -66,6 +66,7 @@
   border-radius: 50px;
   display: flex;
   background-color: #e2e8ec;
+  margin-left: 50px;
 }
 .search-box_f_flex svg{
   width: 5%;
