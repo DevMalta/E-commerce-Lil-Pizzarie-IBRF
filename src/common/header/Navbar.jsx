@@ -53,6 +53,11 @@ const NavBar = () => {
                 Usuário
               </Link>
             </li>
+            <li>
+              <Link to="/pagamento">
+                Pagamento
+              </Link>
+            </li>
         </ul>
       </div>
     </nav>
