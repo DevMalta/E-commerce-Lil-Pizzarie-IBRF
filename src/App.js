@@ -8,6 +8,8 @@ import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import LoginPage from './Components/Login/LoginPage';
 import UserPage from './Components/Login/UserPage';
+import PaymentPage from './Components/componentes_Menu/PaymentPage';
+
 
 // import Cart from "./Components/componentes_Menu/Cart";
 import Menu from "./Components/Teste";
@@ -30,6 +32,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/teste" element={<Menu />} />
+        <Route path="/pagamento" element={<PaymentPage/>} />
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
 
       </Routes>
