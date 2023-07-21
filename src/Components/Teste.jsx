@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Teste.css';
 import StarRating from './object/StarRating';
-import Cart from './componentes_Menu/Cart'
+import Cart from './componentes_Menu/Cart';
 // import Pesquisa from './componentes_Menu/Pesquisa'; // Importamos o componente Pesquisa
 
 import f01 from '../img/flavor01.jpeg';
@@ -15,7 +15,6 @@ import f06 from '../img/flavor06.jpeg';
 import f07 from '../img/flavor07.jpeg';
 import f08 from '../img/flavor08.jpeg';
 import f09 from '../img/flavor09.jpeg';
-
 
 const initialImages = [
   { src: f01, name: 'Marguerita', price: '$ 9.99', description: 'Delicious pizza topped with tomato, mozzarella, and basil.' },
@@ -30,42 +29,52 @@ const initialImages = [
 ];
 
 const Menu = () => {
+  const [searchValue, setSearchValue] = useState(''); // Estado para armazenar o valor de pesquisa
   const [showSecondGrid, setShowSecondGrid] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
-  const [images, setImages] = useState(initialImages.map(image => ({ ...image, views: 0, quantity: 0 })));
+  const [quantidades, setQuantidades] = useState({}); // Definindo o estado das quantidades
 
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
   };
 
   const handleImageClick = (index) => {
-    const updatedImages = [...images];
-    updatedImages[index].views += 1;
-    setImages(updatedImages);
+    const updatedQuantidades = { ...quantidades };
+    updatedQuantidades[initialImages[index].name] = (updatedQuantidades[initialImages[index].name] || 0) + 1;
+    setQuantidades(updatedQuantidades);
   };
 
   const handleQuantityIncrement = (index) => {
-    const updatedImages = [...images];
-    updatedImages[index].quantity += 1;
-    setImages(updatedImages);
+    setQuantidades((prevQuantidades) => ({
+      ...prevQuantidades,
+      [initialImages[index].name]: (prevQuantidades[initialImages[index].name] || 0) + 1,
+    }));
   };
 
   const handleQuantityDecrement = (index) => {
-    const updatedImages = [...images];
-    if (updatedImages[index].quantity > 0) {
-      updatedImages[index].quantity -= 1;
-      setImages(updatedImages);
-    }
+    setQuantidades((prevQuantidades) => ({
+      ...prevQuantidades,
+      [initialImages[index].name]: Math.max(0, (prevQuantidades[initialImages[index].name] || 0) - 1),
+    }));
   };
-  
+
+  useEffect(() => {
+    // Definir as quantidades iniciais de acordo com o estado initialImages
+    const initialQuantidades = {};
+    initialImages.forEach((image) => {
+      initialQuantidades[image.name] = 0;
+    });
+    setQuantidades(initialQuantidades);
+  }, []);
+
   const handleRatingChange = (index, newRating) => {
-    const updatedImages = [...images];
+    const updatedImages = [...initialImages];
     updatedImages[index].rating = newRating;
+    // eslint-disable-next-line no-undef
     setImages(updatedImages);
   };
-  
+
   const renderImages = () => {
-    const filteredImages = images.filter((image) =>
+    const filteredImages = initialImages.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
 
@@ -90,11 +99,11 @@ const Menu = () => {
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-rating">
-                    <StarRating initialValue={images[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
+                    <StarRating initialValue={initialImages[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
                   </div>
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
-                    <span className="quantity">{image.quantity}</span>
+                    <span className="quantity">{quantidades[image.name]}</span>
                     <button className="quantity-button plus" onClick={() => handleQuantityIncrement(index)}>+</button>
                   </div>
                 </div>
@@ -124,11 +133,11 @@ const Menu = () => {
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-rating">
-                    <StarRating initialValue={images[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
+                    <StarRating initialValue={initialImages[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
                   </div>
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
-                    <span className="quantity">{image.quantity}</span>
+                    <span className="quantity">{quantidades[image.name]}</span>
                     <button className="quantity-button plus" onClick={() => handleQuantityIncrement(index)}>+</button>
                   </div>
                 </div>
@@ -153,7 +162,13 @@ const Menu = () => {
       <>
         <div className="menu-container">
           <h2 className="menu-title">Escolha sua Lil Pizza</h2>
-          {/* <Pesquisa handleChange={handleSearchChange} /> */}
+          {/* Adicione o campo de entrada (input) para pesquisa */}
+          <input
+            type="text"
+            value={searchValue}
+            onChange={handleSearchChange}
+            placeholder="Pesquisar pizza..."
+          />
           <div className="menu-grid">
             {renderImages()}
           </div>
@@ -161,7 +176,7 @@ const Menu = () => {
             {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
           </button>
         </div>
-        <Cart />
+        <Cart listaDeItens={initialImages} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
       </>
     </div>
   );

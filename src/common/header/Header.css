@@ -2,8 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+  }
   /*------head-----------*/
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Cor de fundo do cabeçalho */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Atribui um valor alto ao z-index para que o cabeçalho fique acima dos demais elementos */
+    }
+  
   .head {
     background-color: #0f3460;
     padding: 10px 0;

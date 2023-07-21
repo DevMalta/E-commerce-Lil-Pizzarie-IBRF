@@ -1,50 +1,44 @@
-import React, { useState } from "react";
-import "./style/Cart.css";
+import React from 'react';
+import './style/Cart.css';
 
-const Cart_list = () => {
-  const listaDeItens = ["exotic", "Mussarela", "Marguerita"];
-
-  const [quantidades, setQuantidades] = useState(
-    listaDeItens.map(() => 0)
-  );
-
-  const handleQuantityChange = (index, amount) => {
-    const newQuantidades = [...quantidades];
-    newQuantidades[index] += amount;
-    if (newQuantidades[index] < 0) newQuantidades[index] = 0;
-    setQuantidades(newQuantidades);
-  };
-
-  const finalizarCompra = () => {
-    console.log("abrir tela de pagamento");
-  }
+const Cart = ({
+  listaDeItens,
+  quantidades,
+  handleQuantityIncrement,
+  handleQuantityDecrement,
+  handleFinalizarCompra,
+}) => {
+  const pizzasComQuantidade = listaDeItens.filter((item) => quantidades[item.name] > 0);
 
   return (
-    <div className='buy_list fixed_cart'>
-      <div className="title_buy_list">
-        <h1>Minhas Lil Pizzas</h1>
-      </div>
-      <div className='list_buy_list'>
-        <ul>
-          {/* Usando o map para percorrer a lista de itens e gerar os elementos de lista */}
-          {listaDeItens.map((item, index) => (
-            <li key={index}>
-              {item}
-              <div className="quantity_container">
-                <button onClick={() => handleQuantityChange(index, -1)}>-</button>
-                <span>{quantidades[index]}</span>
-                <button onClick={() => handleQuantityChange(index, 1)}>+</button>
+    <div className="cart-container">
+      <h3 className="cart-title">Carrinho de Compras</h3>
+      <ul className="cart-list">
+        {pizzasComQuantidade.map((item, index) => (
+          <li key={index} className="cart-item">
+            <div className="cart-item-info">
+              <div className="cart-product-details">
+                <div className="cart-product-name">{item.name}</div>
               </div>
-              <div className="item_value">
-                Valor: {quantidades[index] * 10} {/* Aqui você pode substituir '10' pelo valor unitário de cada item */}
-              </div>
-            </li>
-          ))}
-        </ul>
-        <button onClick={finalizarCompra}>Finalizar Compra</button>
-      </div>
+            </div>
+            <div className="cart-quantity-buttons">
+              <button className="cart-quantity-button minus" onClick={() => handleQuantityDecrement(index)}>
+                -
+              </button>
+              <span className="cart-quantity">{quantidades[item.name]}</span>
+              <button className="cart-quantity-button plus" onClick={() => handleQuantityIncrement(index)}>
+                +
+              </button>
+              <div className="cart-product-price">{item.price * quantidades[item.name]}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <button className="finalizar-compra-button" onClick={handleFinalizarCompra}>
+        Finalizar Compra
+      </button>
     </div>
   );
 };
 
-export default Cart_list;
+export default Cart;

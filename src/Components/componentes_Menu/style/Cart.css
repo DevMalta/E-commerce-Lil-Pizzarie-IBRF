@@ -1,46 +1,46 @@
-.buy_list{
-    background-color: green; 
-    padding: 20px;
+
+.cart-container {
+  position: fixed;
+  top: 215px;
+  right: 0;
+  width: 225px; /* Ajuste a largura conforme necessário */
+  background-color: green;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
-.buy_list.fixed_cart {
-    position: fixed;
-    top: 215px; /* Defina a distância em relação ao topo que desejar */
-    right: 0; /*Defina a distância em relação à direita que desejar*/
-    width: 300px; /* Defina a largura do elemento fixo */
-    border: 1px solid #ccc; /* Adicione uma borda para ficar mais visível */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adicione sombra para dar destaque */
+/* Adicione a propriedade border-radius para arredondar os cantos */
+.cart-quantity-buttons {
+  display: flex;
+  align-items: center;
   }
 
-  .list_buy_list ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .quantity_container {
-    display: flex; /* Isso fará com que os itens se alinhem em linha */
-    align-items: center; /* Centraliza os itens verticalmente */
-  }
-  
-  .quantity_container button {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    background-color: gray;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5px; /* Adiciona um espaço entre os botões */
-  }
-  
-  .quantity_container span {
-    font-size: 18px;
-    margin-right: 5px;
-  }
-  
+/* Estilo para os botões de quantidade */
+.cart-quantity-button {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px; /* Define um raio de arredondamento de 5 pixels */
+  padding: 5px 8px; /* Ajuste o padding conforme necessário */
+  cursor: pointer;
+  width: 30px; /* Defina a largura desejada */
+  height: 25px; /* Defina a altura desejada */
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.cart-quantity {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.minus, .plus {
+  padding: 0;
+}
+
+.cart-product-price {
+  padding-left: 10px;
+}
+
+.cart-title {
+justify-items: center;
+}

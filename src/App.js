@@ -18,7 +18,9 @@ function App() {
   
   return (
     <Router>
+      <div>
       <Header />
+      <div style={{ marginTop: '215px' }}>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -31,7 +33,10 @@ function App() {
         {/* <Route path="/cart" exact element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} /> */}
 
       </Routes>
+      </div>
+
       <Footer />
+      </div>
     </Router>
   );
 }
