@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Teste.css';
 import StarRating from './object/StarRating';
 import Cart from './componentes_Menu/Cart';
-// import Pesquisa from './componentes_Menu/Pesquisa'; // Importamos o componente Pesquisa
 
 import f01 from '../img/flavor01.jpeg';
 import f02 from '../img/flavor02.jpeg';
@@ -38,22 +37,37 @@ const Menu = () => {
   };
 
   const handleImageClick = (index) => {
+    const filteredImages = initialImages.filter((image) =>
+      image.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    const selectedImageIndex = showSecondGrid ? index + 6 : index;
+    const selectedImage = filteredImages[selectedImageIndex];
     const updatedQuantidades = { ...quantidades };
-    updatedQuantidades[initialImages[index].name] = (updatedQuantidades[initialImages[index].name] || 0) + 1;
+    updatedQuantidades[selectedImage.name] = (updatedQuantidades[selectedImage.name] || 0) + 1;
     setQuantidades(updatedQuantidades);
   };
 
   const handleQuantityIncrement = (index) => {
+    const filteredImages = initialImages.filter((image) =>
+      image.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    const selectedImageIndex = showSecondGrid ? index + 6 : index;
+    const selectedImage = filteredImages[selectedImageIndex];
     setQuantidades((prevQuantidades) => ({
       ...prevQuantidades,
-      [initialImages[index].name]: (prevQuantidades[initialImages[index].name] || 0) + 1,
+      [selectedImage.name]: (prevQuantidades[selectedImage.name] || 0) + 1,
     }));
   };
 
   const handleQuantityDecrement = (index) => {
+    const filteredImages = initialImages.filter((image) =>
+      image.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    const selectedImageIndex = showSecondGrid ? index + 6 : index;
+    const selectedImage = filteredImages[selectedImageIndex];
     setQuantidades((prevQuantidades) => ({
       ...prevQuantidades,
-      [initialImages[index].name]: Math.max(0, (prevQuantidades[initialImages[index].name] || 0) - 1),
+      [selectedImage.name]: Math.max(0, (prevQuantidades[selectedImage.name] || 0) - 1),
     }));
   };
 
@@ -116,7 +130,6 @@ const Menu = () => {
       grid.push(row);
     } else {
       const rowImages = filteredImages.slice(0, 6);
-
       const row = (
         <Row key={0}>
           {rowImages.map((image, index) => (
@@ -160,21 +173,25 @@ const Menu = () => {
   return (
     <div className='page1'>
       <>
-        <div className="menu-container">
-          <h2 className="menu-title">Escolha sua Lil Pizza</h2>
-          {/* Adicione o campo de entrada (input) para pesquisa */}
-          <input
-            type="text"
-            value={searchValue}
-            onChange={handleSearchChange}
-            placeholder="Pesquisar pizza..."
-          />
-          <div className="menu-grid">
-            {renderImages()}
+        <div className='flavor'>
+          <div className="menu-container">
+            {/* <h2 className="menu-title">Escolha sua Lil Pizza</h2> */}
+            {/* Adicione o campo de entrada (input) para pesquisa */}
+            <input
+              type="text"
+              value={searchValue}
+              onChange={handleSearchChange}
+              placeholder="Pesquisar pizza..."
+              className="fixed-search-bar"
+            />
+            <div className="menu-grid">
+              {renderImages()}
+            </div>
+            <button className="toggle-button" onClick={handleToggleGrid}>
+              {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
+            </button>
           </div>
-          <button className="toggle-button" onClick={handleToggleGrid}>
-            {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
-          </button>
+          <div className='transparent'>kdfjghçlkb~lkgfb~lnb~lbkn~lgfbn~fglbn~fglbn~fglbn~flgbn~fgln~gflkdfjghçfkjg</div>
         </div>
         <Cart listaDeItens={initialImages} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
       </>

@@ -1,3 +1,21 @@
+.fixed-search-bar {
+  position: fixed;
+  top: 190px; /* Define a posição no topo da tela */
+  left: 0; /* Define a posição na extremidade esquerda da tela */
+  right: 0; /* Define a posição na extremidade direita da tela */
+  background-color: #fff; /* Define a cor de fundo */
+  padding: 10px; /* Adicione um espaço de preenchimento para melhor aparência */
+  z-index: 999; /* Defina um índice Z alto para garantir que fique acima dos outros elementos */
+}
+
+.flavor {
+  top: 5%;
+  display: contents;
+}
+
+.transparent {
+  width: 260px;
+}
 
 .row {
     width: 90%;
@@ -77,6 +95,7 @@
   }
   
   .quantity-button {
+    width: 20px;
     padding: 5px 10px;
     margin: 0 5px;
     font-size: 18px;

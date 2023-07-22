@@ -64,7 +64,7 @@ const Contato = () => {
             required
           ></textarea>
         </div>
-        <button type="submit">Enviar</button>
+        <button className='button-send' type="submit">Enviar</button>
       </form>
     </div>
   );

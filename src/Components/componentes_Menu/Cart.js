@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style/Cart.css';
+import { Link } from 'react-router-dom';
 
 const Cart = ({
   listaDeItens,
@@ -61,7 +62,9 @@ const formatarValor = (valor) => {
         <strong>Total:</strong> $ {formatarValor(valorTotal)}
       </div>
       <button className="finalizar-compra-button" onClick={handleFinalizarCompra}>
-        Finalizar Compra
+      <Link to="/pagamento">
+          Finalizar Compra
+      </Link>
       </button>
     </div>
   );

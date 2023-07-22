@@ -27,7 +27,7 @@
     border-radius: 4px;
   }
   
-  button {
+  .button-send {
     display: block;
     width: 100%;
     padding: 10px;
@@ -38,7 +38,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .button-send:hover {
     background-color: #45a049;
   }
   
