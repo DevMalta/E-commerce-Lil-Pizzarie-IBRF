@@ -8,7 +8,7 @@ import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import LoginPage from './Components/Login/LoginPage';
 import UserPage from './Components/Login/UserPage';
-import PaymentPage from './Components/componentes_Menu/PaymentPage';
+import PaymentPage from './Components/pagamento/PaymentPage';
 
 
 // import Cart from "./Components/componentes_Menu/Cart";
