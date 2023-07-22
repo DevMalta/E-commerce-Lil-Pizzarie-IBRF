@@ -17,15 +17,15 @@ import f08 from '../img/flavor08.jpeg';
 import f09 from '../img/flavor09.jpeg';
 
 const initialImages = [
-  { src: f01, name: 'Marguerita', price: '$ 9.99', description: 'Delicious pizza topped with tomato, mozzarella, and basil.' },
-  { src: f02, name: 'Exotic', price: '$ 11.99', description: 'An exotic blend of flavors including pineapple, ham, and barbecue sauce.' },
-  { src: f03, name: 'Mussarela', price: '$ 8.99', description: 'Classic pizza with melted mozzarella cheese and tomato sauce.' },
-  { src: f04, name: 'House special', price: '$ 12.99', description: 'Our special pizza with a combination of various toppings.' },
-  { src: f05, name: 'Mexican pepper', price: '$ 10.99', description: 'Spicy pizza with jalapenos, bell peppers, and seasoned ground beef.' },
-  { src: f06, name: 'Tomato with Olive', price: '$ 9.99', description: 'Fresh tomato slices and black olives make this pizza a delight.' },
-  { src: f07, name: 'M&M', price: '$ 8.99', description: 'A unique pizza with a sweet twist - M&M candies as toppings.' },
-  { src: f08, name: 'Tarantela', price: '$ 11.99', description: 'A flavorful pizza with Italian sausage, mushrooms, and onions.' },
-  { src: f09, name: 'Broccoli', price: '$ 10.99', description: 'Healthy and delicious pizza topped with broccoli and cheese.' },
+  { src: f01, name: 'Marguerita', price: 9.99, description: 'Delicious pizza topped with tomato, mozzarella, and basil.' },
+  { src: f02, name: 'Exotic', price: 11.99, description: 'An exotic blend of flavors including pineapple, ham, and barbecue sauce.' },
+  { src: f03, name: 'Mussarela', price: 8.99, description: 'Classic pizza with melted mozzarella cheese and tomato sauce.' },
+  { src: f04, name: 'House special', price: 12.99, description: 'Our special pizza with a combination of various toppings.' },
+  { src: f05, name: 'Mexican pepper', price: 10.99, description: 'Spicy pizza with jalapenos, bell peppers, and seasoned ground beef.' },
+  { src: f06, name: 'Tomato with Olive', price: 9.99, description: 'Fresh tomato slices and black olives make this pizza a delight.' },
+  { src: f07, name: 'M&M', price: 8.99, description: 'A unique pizza with a sweet twist - M&M candies as toppings.' },
+  { src: f08, name: 'Tarantela', price: 11.99, description: 'A flavorful pizza with Italian sausage, mushrooms, and onions.' },
+  { src: f09, name: 'Broccoli', price: 10.99, description: 'Healthy and delicious pizza topped with broccoli and cheese.' },
 ];
 
 const Menu = () => {
