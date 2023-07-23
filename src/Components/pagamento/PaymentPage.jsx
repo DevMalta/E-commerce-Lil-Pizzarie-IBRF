@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import PixPayment from './PixPayment';
 import CreditCardPayment from './CreditCardPayment';
 import './styles/PaymentPage.css'; // Importe o arquivo CSS para estilização
+import CheckoutBox from './CheckOut';
 
 const PaymentPage = () => {
+  const totalValue = 100.5;
   const [selectedPayment, setSelectedPayment] = useState(null);
 
   // Função para renderizar o conteúdo do componente selecionado
@@ -44,6 +46,9 @@ const PaymentPage = () => {
                     />
                     Cartão de Crédito
                 </label>
+            </div>
+            <div className='campo-valor'>
+            <CheckoutBox total={totalValue} />
             </div>
         </div>
         <div className="selected-payment-content">
