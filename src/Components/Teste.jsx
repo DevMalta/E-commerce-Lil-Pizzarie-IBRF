@@ -173,8 +173,8 @@ const Menu = () => {
   return (
     <div className='page1'>
       <>
-        <div className='flavor'>
-          <div className="menu-container">
+      <div className='flavor'>
+        <div className="menu-container">
             {/* <h2 className="menu-title">Escolha sua Lil Pizza</h2> */}
             {/* Adicione o campo de entrada (input) para pesquisa */}
             <input
@@ -184,17 +184,17 @@ const Menu = () => {
               placeholder="Pesquisar pizza..."
               className="fixed-search-bar"
             />
-            <div className="menu-grid">
+          <div className="menu-grid">
               {renderImages()}
-            </div>
+          </div>
             <button className="toggle-button" onClick={handleToggleGrid}>
               {showSecondGrid ? 'Menos sabores' : 'Mais sabores'}
             </button>
-          </div>
-          <div className='transparent'>kdfjghçlkb~lkgfb~lnb~lbkn~lgfbn~fglbn~fglbn~fglbn~flgbn~fgln~gflkdfjghçfkjg</div>
         </div>
+      <div className='transparent'>ooooooooooooooooooooooooo</div>
+      </div>
         <Cart listaDeItens={initialImages} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
-      </>
+        </>
     </div>
   );
 };

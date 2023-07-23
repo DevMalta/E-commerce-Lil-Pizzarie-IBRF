@@ -18,9 +18,9 @@
 }
 
 .row {
-    width: 90%;
+    width: 95%;
     padding-left: 5%;
-    padding-right: 5%;
+    /* padding-right: 5%; */
     align-items: center;
   }
   .menu-container {
@@ -67,6 +67,10 @@
     margin-bottom: 10px;
   }
   
+  .product-box img{
+    max-width: 340px;
+    max-height: 340px;
+  }
   .product-info {
     margin-bottom: 10px;
   }
