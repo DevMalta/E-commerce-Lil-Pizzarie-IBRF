@@ -34,7 +34,7 @@ const Search = ({ CartItem }) => {
               </div>
                           
               <div className="cart">
-              <Link to='/cart'>
+              <Link to='/cartpage'>
               <FontAwesomeIcon icon={faCartShopping} />
               </Link>
             </div>

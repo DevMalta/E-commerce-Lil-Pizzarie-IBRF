@@ -8,6 +8,8 @@ import Footer from "./common/footer/Footer"
 import Header from "./common/header/Header"
 import LoginPage from './Components/Login/LoginPage';
 import UserPage from './Components/Login/UserPage';
+import CartPage from './Components/componentes_Menu/CartPage';
+
 import PaymentPage from './Components/pagamento/PaymentPage';
 
 
@@ -28,7 +30,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contato" element={<Contato />} />
         {/* <Route path="/menu" element={<Menu />} /> */}
-        {/* <Route path="/cart" element={<Cart />} /> */}
+        <Route path="/cartpage" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/teste" element={<Menu />} />
