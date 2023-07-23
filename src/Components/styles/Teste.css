@@ -77,8 +77,12 @@
   }
   
   .product-name {
+    height: 50px;
     font-weight: bold;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .product-price {
@@ -86,6 +90,9 @@
   }
   
   .product-description {
+  height: 130px; /* Defina a altura fixa desejada, se aplicável */
+  overflow: hidden; /* Isso impedirá que o conteúdo exceda o tamanho fixo */
+  /* Outros estilos opcionais para aparência da caixa de descrição */
     margin-bottom: 10px;
   }
   

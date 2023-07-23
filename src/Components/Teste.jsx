@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Teste.css';
-import StarRating from './object/StarRating';
+// import StarRating from './object/StarRating';
 import Cart from './componentes_Menu/Cart';
 
 import f01 from '../img/flavor01.jpeg';
@@ -112,9 +112,9 @@ const Menu = () => {
                   <div className="product-name">{image.name}</div>
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
-                  <div className="product-rating">
+                  {/* <div className="product-rating">
                     <StarRating initialValue={initialImages[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
-                  </div>
+                  </div> */}
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
                     <span className="quantity">{quantidades[image.name]}</span>
@@ -145,9 +145,9 @@ const Menu = () => {
                   <div className="product-name">{image.name}</div>
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
-                  <div className="product-rating">
+                  {/* <div className="product-rating">
                     <StarRating initialValue={initialImages[index].rating} onChange={(newRating) => handleRatingChange(index, newRating)} />
-                  </div>
+                  </div> */}
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
                     <span className="quantity">{quantidades[image.name]}</span>
