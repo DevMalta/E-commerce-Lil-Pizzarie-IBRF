@@ -1,6 +1,7 @@
 import React from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faEnvelope, faPhone, faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 const Head = () => {
   return (
@@ -18,7 +19,9 @@ const Head = () => {
           <label>PT-BR</label>
           <label>ENG</label>
         </div>
+
       </div>
+
     </section>
   )
 }

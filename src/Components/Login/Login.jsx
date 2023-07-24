@@ -28,7 +28,8 @@ const Login = () => {
     setLoggedIn(true);
 
     // Redirecionar para a página do usuário após o login bem-sucedido
-    navigate('/user');
+    // navigate('/user');
+    alert ('Login efetuado com sucesso')
   };
 
   return (

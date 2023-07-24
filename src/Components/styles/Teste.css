@@ -90,7 +90,7 @@
   }
   
   .product-description {
-  height: 130px; /* Defina a altura fixa desejada, se aplicável */
+  height: 120px; /* Defina a altura fixa desejada, se aplicável */
   overflow: hidden; /* Isso impedirá que o conteúdo exceda o tamanho fixo */
   /* Outros estilos opcionais para aparência da caixa de descrição */
     margin-bottom: 10px;
@@ -108,7 +108,7 @@
   
   .quantity-button {
     width: 20px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin: 0 5px;
     font-size: 18px;
     background-color: #333;

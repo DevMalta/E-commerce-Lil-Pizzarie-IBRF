@@ -38,26 +38,26 @@ const NavBar = () => {
                 Menu
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/login">
                 Login 
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/teste">
                 Teste
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/user">
                 Usuário
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/pagamento">
                 Pagamento
               </Link>
-            </li>
+            </li> */}
         </ul>
       </div>
     </nav>

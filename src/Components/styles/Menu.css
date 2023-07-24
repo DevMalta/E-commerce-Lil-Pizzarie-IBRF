@@ -1,109 +1,144 @@
+.fixed-search-bar {
+  position: fixed;
+  top: 190px; /* Define a posição no topo da tela */
+  left: 0; /* Define a posição na extremidade esquerda da tela */
+  right: 0; /* Define a posição na extremidade direita da tela */
+  background-color: #fff; /* Define a cor de fundo */
+  padding: 10px; /* Adicione um espaço de preenchimento para melhor aparência */
+  z-index: 999; /* Defina um índice Z alto para garantir que fique acima dos outros elementos */
+}
+
+.flavor {
+  top: 5%;
+  display: contents;
+}
+
+.transparent {
+  width: 260px;
+}
 
 .row {
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  align-items: center;
-}
-.menu-container {
-  max-width: 100%;
-  margin: 0 auto;
-  /* padding: 20px; */
-}
-
-.menu-title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.toggle-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 !important;
-}
-
-.product-box {
-  width: 90%;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-}
-
-.product-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.product-info {
-  margin-bottom: 10px;
-}
-
-.product-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.product-price {
-  color: #888;
-}
-
-.product-description {
-  margin-bottom: 10px;
-}
-
-.product-rating {
-  margin-bottom: 10px;
-}
-
-.product-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quantity-button {
-  padding: 5px 10px;
-  margin: 0 5px;
-  font-size: 18px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.quantity {
-  font-weight: bold;
-  margin: 0 5px;
-}
-
+    margin-top: 20px;
+    width: 95%;
+    padding-left: 5%;
+    /* padding-right: 5%; */
+    align-items: center;
+  }
+  .menu-container {
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding: 20px; */
+  }
   
-  /* Estilos responsivos */
-  @media (max-width: 767px) {
-    .menu-container {
-      padding: 10px;
-    }
+  .menu-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
   
-    .menu-title {
-      font-size: 20px;
-    }
+  .toggle-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
   
-    .product-box {
-      width: 100%;
-      margin: 10px 0;
-    }
-  }  
+  .menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 !important;
+  }
+  
+  .product-box {
+    width: 90%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-box img{
+    max-width: 340px;
+    max-height: 340px;
+  }
+  .product-info {
+    margin-bottom: 10px;
+  }
+  
+  .product-name {
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-price {
+    color: #888;
+  }
+  
+  .product-description {
+  height: 120px; /* Defina a altura fixa desejada, se aplicável */
+  overflow: hidden; /* Isso impedirá que o conteúdo exceda o tamanho fixo */
+  /* Outros estilos opcionais para aparência da caixa de descrição */
+    margin-bottom: 10px;
+  }
+  
+  .product-rating {
+    margin-bottom: 10px;
+  }
+  
+  .product-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    width: 20px;
+    padding: 5px 5px;
+    margin: 0 5px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  
+  .page1{
+    display: flex;
+    justify-content: inline-block;
+  }
+    
+    /* Estilos responsivos */
+    @media (max-width: 767px) {
+      .menu-container {
+        padding: 10px;
+      }
+    
+      .menu-title {
+        font-size: 20px;
+      }
+    
+      .product-box {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }  

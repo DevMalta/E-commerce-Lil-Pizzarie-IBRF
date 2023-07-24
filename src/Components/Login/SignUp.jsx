@@ -43,7 +43,8 @@ const Signup = () => {
     // Por exemplo, chamar uma função para fazer uma requisição ao servidor para criar o novo usuário
 
     // Redirecionar para a página de usuário após o cadastro bem-sucedido
-    navigate('/user');
+      // navigate('/user');
+      alert ('Cadastro efetuado com sucesso')
   };
 
   return (
