@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/AboutUs.css'; // Importe o arquivo CSS para estilização
+import './AboutUs.css'; // Importe o arquivo CSS para estilização
 import forno from '../assets/forno.jpeg';
 
 

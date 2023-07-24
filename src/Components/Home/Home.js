@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Home.css'; // Importe o arquivo CSS para estilização
+import './Home.css'; // Importe o arquivo CSS para estilização
 import pizza from '../assets/pizza_home.jpeg';
 
 function Home() {

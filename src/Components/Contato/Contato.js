@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/Contato.css'; // Importe o arquivo CSS para estilização
+import './Contato.css'; // Importe o arquivo CSS para estilização
 
 const Contato = () => {
   const [nome, setNome] = useState('');
