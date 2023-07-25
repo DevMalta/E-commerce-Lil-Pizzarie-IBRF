@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. Importar o hook useNavigate
-import "./styles/SignUp.css";
+import "../styles/SignUp.css";
 
 const Signup = () => {
   const [email, setEmail] = useState('');

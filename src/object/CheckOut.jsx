@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/CheckOut.css'; // Arquivo de estilo opcional
+import '../styles/CheckOut.css'; // Arquivo de estilo opcional
 
 const CheckoutBox = ({ total }) => {
   return (

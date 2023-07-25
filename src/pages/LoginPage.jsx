@@ -1,8 +1,8 @@
 import React from "react"
 
-import "./styles/LoginPage.css"
-import Login from "./Login"
-import SignUp from "./SignUp"
+import "../styles/LoginPage.css"
+import Login from "../object/Login"
+import SignUp from "../object/SignUp"
 
 
 const LoginPage = () => {

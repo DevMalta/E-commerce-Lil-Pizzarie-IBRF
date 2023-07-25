@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import StarRating from '../object/StarRating';
+import StarRating from './StarRating';
 
 const PizzaModal = ({ show, onHide, pizza }) => {
   // Verificar se a pizza está definida antes de acessar suas propriedades

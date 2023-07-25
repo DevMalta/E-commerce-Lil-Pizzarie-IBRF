@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/Menu.css';
-import Cart from './componentes_Menu/Cart';
-import PizzaModal from './componentes_Menu/Modal';
+import '../styles/Menu.css';
+import Cart from '../object/Cart';
+import PizzaModal from '../object/Modal';
 
 import f01 from '../img/flavor01.jpeg';
 import f02 from '../img/flavor02.jpeg';
