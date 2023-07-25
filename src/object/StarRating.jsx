@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css'; // Importe o arquivo de estilos
+import '../styles/StarRating.css' // Importe o arquivo de estilos
 
 const StarRating = ({ initialValue, onChange }) => {
   const [rating, setRating] = useState(initialValue || 0);

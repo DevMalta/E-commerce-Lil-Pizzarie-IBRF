@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PixPayment from './PixPayment';
-import CreditCardPayment from './CreditCardPayment';
-import './styles/PaymentPage.css'; // Importe o arquivo CSS para estilização
-import CheckoutBox from './CheckOut';
+import PixPayment from '../object/PixPayment';
+import CreditCardPayment from '../object/CreditCardPayment';
+import '../styles/PaymentPage.css'; // Importe o arquivo CSS para estilização
+import CheckoutBox from '../object/CheckOut';
 
 const PaymentPage = () => {
   const totalValue = 100.5;

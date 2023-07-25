@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/PixPayment.css'
+import '../styles/PixPayment.css'
 
 const PixPayment = () => {
   const handlePixPayment = () => {

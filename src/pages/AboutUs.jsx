@@ -1,6 +1,6 @@
 import React from 'react';
-import './AboutUs.css'; // Importe o arquivo CSS para estilização
-import forno from '../assets/forno.jpeg';
+import '../styles/AboutUs.css'; // Importe o arquivo CSS para estilização
+import forno from '../img/forno.jpeg';
 
 
 const AboutUs = () => {
