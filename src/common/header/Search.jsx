@@ -3,7 +3,7 @@ import logo from './assets/logoFrioLis.png';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons';
-
+import Navbar from "./Navbar"
 
 const Search = ({ CartItem }) => {
   // fixed Header
@@ -16,10 +16,13 @@ const Search = ({ CartItem }) => {
     <>
       <section className='search'>
         <div className='container_c_flex'>
+          <div className="navbar-search">
+            <Navbar />
+          </div>
           <div className='logo_width '>
             <img src={logo} alt='' />
           </div>
-
+          
          {/* <div className='search-box_f_flex'>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
           <input type='text' placeholder='O que você deseja...' />

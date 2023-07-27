@@ -18,9 +18,10 @@ const NavBar = () => {
           <div className="menu-btn-burger"></div>
         </div>
         <ul className={`menu ${menuOpen ? 'active' : ''}`}>
-        <li>
-              <Link to="/">
-                Home
+
+            <li>
+              <Link to="/menu">
+                Menu
               </Link>
             </li>
             <li>
@@ -33,31 +34,6 @@ const NavBar = () => {
                 Contato
               </Link>
             </li>
-            <li>
-              <Link to="/menu">
-                Menu
-              </Link>
-            </li>
-            {/* <li>
-              <Link to="/login">
-                Login 
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to="/teste">
-                Teste
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to="/user">
-                Usuário
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link to="/pagamento">
-                Pagamento
-              </Link>
-            </li> */}
         </ul>
       </div>
     </nav>

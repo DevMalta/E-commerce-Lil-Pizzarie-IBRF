@@ -4,10 +4,11 @@
   right: 0;
   /* height: 100%; */
   width: 260px; /* Ajuste a largura conforme necessário */
-  background-color: rgb(91, 101, 88);
+  /* background-color: rgb(91, 101, 88); */
+  background-color: #ffb005;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  margin-top: -37px;
+  margin-top: -73px;
 }
 
 .cart-title {
@@ -103,4 +104,9 @@ justify-items: center;
 .row_list {
   margin: 1px;
   color: black;
+}
+@media (max-width: 768px) { 
+  .cart-container{
+    margin-top: -18px;
+  }
 }

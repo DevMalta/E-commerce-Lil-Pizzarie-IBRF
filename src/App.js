@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import About from './pages/AboutUs';
 import Contato from './pages/Contato';
 // import Menu from './Components/Menu';
@@ -26,7 +26,7 @@ function App() {
       <Header />
       <div style={{ marginTop: '215px' }}>
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/" exact element={<Menu />} />
         <Route path="/about" element={<About />} />
         <Route path="/contato" element={<Contato />} />
         {/* <Route path="/menu" element={<Menu />} /> */}

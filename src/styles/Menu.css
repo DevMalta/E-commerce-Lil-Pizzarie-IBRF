@@ -1,6 +1,6 @@
 .fixed-search-bar {
   position: fixed;
-  top: 132px; /* Define a posição no topo da tela */
+  top: 97px; /* Define a posição no topo da tela */
   left: 0; /* Define a posição na extremidade esquerda da tela */
   right: 0; /* Define a posição na extremidade direita da tela */
   background-color: #fff; /* Define a cor de fundo */
@@ -128,7 +128,10 @@
   }
     
     /* Estilos responsivos */
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
+      .fixed-search-bar {
+        top: 150px;
+      }
       .menu-container {
         padding: 10px;
       }
