@@ -16,39 +16,24 @@ const Menu = () => {
     setSearchValue(event.target.value);
   };
 
-  const handleImageClick = (index) => {
-    const filteredImages = imagens.filter((image) =>
-      image.name.toLowerCase().includes(searchValue.toLowerCase())
-    );
-    const selectedImageIndex = showSecondGrid ? index + 6 : index;
-    const selectedImage = filteredImages[selectedImageIndex];
+  const handleImageClick = (image) => {
     const updatedQuantidades = { ...quantidades };
-    updatedQuantidades[selectedImage.name] = (updatedQuantidades[selectedImage.name] || 0) + 1;
+    updatedQuantidades[image.name] = (updatedQuantidades[image.name] || 0);
     setQuantidades(updatedQuantidades);
-    setSelectedPizza(selectedImage);
+    setSelectedPizza(image);
   };
 
-  const handleQuantityIncrement = (index) => {
-    const filteredImages = imagens.filter((image) =>
-      image.name.toLowerCase().includes(searchValue.toLowerCase())
-    );
-    const selectedImageIndex = showSecondGrid ? index + 6 : index;
-    const selectedImage = filteredImages[selectedImageIndex];
+  const handleQuantityIncrement = (image) => {
     setQuantidades((prevQuantidades) => ({
       ...prevQuantidades,
-      [selectedImage.name]: (prevQuantidades[selectedImage.name] || 0) + 1,
+      [image.name]: (prevQuantidades[image.name] || 0) + 1,
     }));
   };
 
-  const handleQuantityDecrement = (index) => {
-    const filteredImages = imagens.filter((image) =>
-      image.name.toLowerCase().includes(searchValue.toLowerCase())
-    );
-    const selectedImageIndex = showSecondGrid ? index + 6 : index;
-    const selectedImage = filteredImages[selectedImageIndex];
+  const handleQuantityDecrement = (image) => {
     setQuantidades((prevQuantidades) => ({
       ...prevQuantidades,
-      [selectedImage.name]: Math.max(0, (prevQuantidades[selectedImage.name] || 0) - 1),
+      [image.name]: Math.max(0, (prevQuantidades[image.name] || 0) - 1),
     }));
   };
 
@@ -59,13 +44,6 @@ const Menu = () => {
     });
     setQuantidades(initialQuantidades);
   }, []);
-
-  const handleRatingChange = (index, newRating) => {
-    const updatedImages = [...imagens];
-    updatedImages[index].rating = newRating;
-    // eslint-disable-next-line no-undef
-    setImages(updatedImages);
-  };
 
   const renderImages = () => {
     const filteredImages = imagens.filter((image) =>
@@ -86,16 +64,16 @@ const Menu = () => {
                   src={image.src}
                   alt={`product ${index + 1}`}
                   className="product-image"
-                  onClick={() => handleImageClick(index + 6)}
+                  onClick={() => handleImageClick(image)}
                 />
                 <div className="product-info">
                   <div className="product-name">{image.name}</div>
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-buttons">
-                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
+                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(image)}>-</button>
                     <span className="quantity">{quantidades[image.name]}</span>
-                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(index)}>+</button>
+                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(image)}>+</button>
                   </div>
                 </div>
               </div>
@@ -116,16 +94,16 @@ const Menu = () => {
                   src={image.src}
                   alt={`Product ${index + 1}`}
                   className="product-image"
-                  onClick={() => handleImageClick(index)}
+                  onClick={() => handleImageClick(image)}
                 />
                 <div className="product-info">
                   <div className="product-name">{image.name}</div>
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-buttons">
-                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(index)}>-</button>
+                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(image)}>-</button>
                     <span className="quantity">{quantidades[image.name]}</span>
-                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(index)}>+</button>
+                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(image)}>+</button>
                   </div>
                 </div>
               </div>
@@ -150,33 +128,35 @@ const Menu = () => {
 
   return (
     <div className='page1'>
-      <>
       <div className='flavor'>
         <div className="menu-container">
-            <input
-              type="text"
-              value={searchValue}
-              onChange={handleSearchChange}
-              placeholder="Pesquisar pizza..."
-              className="fixed-search-bar"
-            />
+          <input
+            type="text"
+            value={searchValue}
+            onChange={handleSearchChange}
+            placeholder="Pesquisar pizza..."
+            className="fixed-search-bar"
+          />
           <div className="menu-grid">
-              {renderImages()}
-              <PizzaModal
-          show={!!selectedPizza}
-          onHide={handleCloseModal}
-          pizza={selectedPizza}
-        />
-
+            {renderImages()}
+            <PizzaModal
+              show={!!selectedPizza}
+              onHide={handleCloseModal}
+              pizza={selectedPizza}
+            />
           </div>
-            <button className="toggle-button" onClick={handleToggleGrid}>
-              {showSecondGrid ? 'Outros sabores' : 'Outros sabores'}
-            </button>
+          <button className="toggle-button" onClick={handleToggleGrid}>
+            {showSecondGrid ? 'Outros sabores' : 'Outros sabores'}
+          </button>
         </div>
-      <div className='transparent'>ooooooooooooooooooooooooo</div>
+        <div className='transparent'>ooooooooooooooooooooooooo</div>
       </div>
-        <Cart listaDeItens={imagens} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
-        </>
+      <Cart
+        listaDeItens={imagens}
+        quantidades={quantidades}
+        handleQuantityIncrement={handleQuantityIncrement}
+        handleQuantityDecrement={handleQuantityDecrement}
+      />
     </div>
   );
 };

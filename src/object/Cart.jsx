@@ -12,7 +12,6 @@ const Cart = ({
   const [valorTotal, setValorTotal] = useState(0);
 
   useEffect(() => {
-    // Calcula o valor total toda vez que a lista de itens ou quantidades for alterada
     let total = 0;
     listaDeItens.forEach((item) => {
       total += item.price * quantidades[item.name];
@@ -20,10 +19,9 @@ const Cart = ({
     setValorTotal(total);
   }, [listaDeItens, quantidades]);
 
-// Função para formatar o valor para ter no máximo duas casas decimais
-const formatarValor = (valor) => {
-  return parseFloat(valor).toFixed(2);
-};
+  const formatarValor = (valor) => {
+    return parseFloat(valor).toFixed(2);
+  };
 
   return (
     <div className="cart-container">
@@ -37,14 +35,14 @@ const formatarValor = (valor) => {
                 <div className="cart-quantity-buttons">
                   <button
                     className="cart-quantity-button minus"
-                    onClick={() => handleQuantityDecrement(index)}
+                    onClick={() => handleQuantityDecrement(item)}
                   >
                     -
                   </button>
                   <span className="cart-quantity">{quantidades[item.name]}</span>
                   <button
                     className="cart-quantity-button plus"
-                    onClick={() => handleQuantityIncrement(index)}
+                    onClick={() => handleQuantityIncrement(item)}
                   >
                     +
                   </button>
@@ -62,9 +60,9 @@ const formatarValor = (valor) => {
         <strong>Total:</strong> $ {formatarValor(valorTotal)}
       </div>
       <button className="finalizar-compra-button" onClick={handleFinalizarCompra}>
-      <Link to="/pagamento">
+        <Link to="/pagamento">
           Finalizar Compra
-      </Link>
+        </Link>
       </button>
     </div>
   );
