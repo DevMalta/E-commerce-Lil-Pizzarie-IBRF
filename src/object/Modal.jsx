@@ -38,6 +38,7 @@ const PizzaModal = ({ show, onHide, pizza }) => {
           />
           <p>{pizza.description}</p>
           <p>Preço: {pizza.price}</p>
+          <p>Informações nutricionais: {pizza.description}</p>
 
           {/* Aqui estão os componentes StarRating */}
           <div className="product-rating">

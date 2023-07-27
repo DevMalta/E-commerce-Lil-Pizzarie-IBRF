@@ -55,7 +55,7 @@
 
   .search{
     padding: 10px 0;
-    background-color: #FF4500;
+    background-color: #fde401;
     }
 .container_c_flex{
   display: flex;
@@ -65,7 +65,7 @@
   margin: auto;
 }
 .logo_width img{
-  width: 70px;
+  width: 100px;
   height: auto;
   margin-right: 5px;
 }
