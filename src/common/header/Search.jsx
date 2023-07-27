@@ -1,5 +1,5 @@
 import React from "react"
-import logo from './assets/logo.png';
+import logo from './assets/Lil-logo.jpeg';
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons';
@@ -20,11 +20,11 @@ const Search = ({ CartItem }) => {
             <img src={logo} alt='' />
           </div>
 
-          <div className='search-box_f_flex'>
+         {/* <div className='search-box_f_flex'>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
           <input type='text' placeholder='O que você deseja...' />
-            {/* <span>All Category</span> */}
-          </div>
+             <span>All Category</span> 
+          </div>*/}
 
           <div className='icon_f_flex_width'>
               <div className="usuario">
