@@ -1,0 +1,106 @@
+.cart-container {
+  position: fixed;
+  top: auto;
+  right: 0;
+  /* height: 100%; */
+  width: 260px; /* Ajuste a largura conforme necessário */
+  background-color: rgb(91, 101, 88);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.cart-title {
+font-size: 22px;
+color: white;
+}
+
+.finalizar-compra-button {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  /* background-color: #4caf50; */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.finalizar-compra-button:hover {
+  background-color: #001885;
+  color: white;
+}
+
+.cart-total {
+font-size: 22px;
+color: white;
+text-align: right;
+}
+
+.cart-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-product-details {
+  display: flex;
+  align-items: center;
+ }
+
+.cart-product-name {
+  color: white;
+  font-size: 12px;
+  width: 105px;
+  text-align: left !important;
+}
+
+
+/* Adicione a propriedade border-radius para arredondar os cantos */
+.cart-quantity-buttons {
+  color: white;
+  display: flex;
+  align-items: center; /* Alinhe as divs ao centro horizontalmente */
+}
+
+/* Estilo para os botões de quantidade */
+.cart-quantity-button {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px; /* Define um raio de arredondamento de 5 pixels */
+  padding: 1px 1px; /* Ajuste o padding conforme necessário */
+  cursor: pointer;
+  width: 20px; /* Defina a largura desejada */
+  height: 25px; /* Defina a altura desejada */
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin: 2px; /* Adicione uma margem entre os botões para melhor espaçamento */
+}
+
+.cart-quantity {
+  width: 20px;
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.minus, .plus {
+  padding: 0;
+}
+
+.cart-product-price {
+  color: white;
+  width: 70px;
+  padding-left: 3px;
+
+}
+
+.cart-title {
+justify-items: center;
+}
+
+.row_list {
+  margin: 1px;
+  color: black;
+}

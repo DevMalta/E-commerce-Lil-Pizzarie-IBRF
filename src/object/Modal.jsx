@@ -1,10 +1,8 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import StarRating from './StarRating';
 
 const PizzaModal = ({ show, onHide, pizza }) => {
-  // Verificar se a pizza está definida antes de acessar suas propriedades
   if (!pizza) return null;
 
   const modalStyle = {
@@ -18,9 +16,7 @@ const PizzaModal = ({ show, onHide, pizza }) => {
     height: 'auto',
   };
 
-  // Defina a função handleRatingChange para lidar com as alterações na classificação por estrelas
   const handleRatingChange = (newRating) => {
-    // Faça algo com o valor newRating (por exemplo, atualize a classificação da pizza)
     console.log('Nova classificação:', newRating);
   };
 
@@ -30,7 +26,7 @@ const PizzaModal = ({ show, onHide, pizza }) => {
         <Modal.Title>{pizza.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div style={modalStyle}> {/* Aplicar o estilo diretamente na div */}
+        <div style={modalStyle}>
           <img
             src={pizza.src}
             alt={pizza.name}
@@ -38,9 +34,8 @@ const PizzaModal = ({ show, onHide, pizza }) => {
           />
           <p>{pizza.description}</p>
           <p>Preço: {pizza.price}</p>
-          <p>Informações nutricionais: {pizza.description}</p>
+          <p className='infoNutricional'>Informações nutricionais: {pizza.description}</p>
 
-          {/* Aqui estão os componentes StarRating */}
           <div className="product-rating">
             <StarRating initialValue={pizza.rating} onChange={(newRating) => handleRatingChange(newRating)} />
           </div>

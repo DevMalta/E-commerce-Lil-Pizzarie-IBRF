@@ -4,33 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Menu.css';
 import Cart from '../object/Cart';
 import PizzaModal from '../object/Modal';
-
-import f01 from '../img/LasanhaBolonhesaSadia.png';
-import f02 from '../img/lasanhaPeitodePeru600Sadia.png';
-import f03 from '../img/almondegasdeCarne.png';
-import f04 from '../img/MacandCheese.png';
-import f05 from '../img/pizza4QueijosSadia.png';
-import f06 from '../img/Bigchickenqueijo.png';
-import f07 from '../img/HamburguerPerdigao.png';
-import f08 from '../img/Linguiça toscana com pimenta biquinho.png';
-import f09 from '../img/Linguiça toscana com queijo coalho.png';
-
-const initialImages = [
-  { src: f01, name: 'Lasanha Bolonhesa', price: 15.99, description: ' Porção 300g (½ unidade), Valor energético:389 kcal, Carboidratos: 36g, Proteínas: 24g, Gorduras totais: 17g, Gorduras Saturadas: 7,1g, Gorduras trans: 0g, Fibra alimentar: 3g, Sódio: 774mg ' },
-  { src: f02, name: 'Lasanha Peito de Peru', price: 14.99, description: ' Porção 300g (1/2 unidade), Valor energético: 461 kcal, Carboidratos: 40g, Proteínas: 15g, Gorduras totais: 27g, Gorduras Saturadas: 12g, Gorduras trans: 0g, Fibra alimentar: 3,8g, Sódio: 786mg ' },
-  { src: f03, name: 'Almondegas de Carne', price: 11.99, description: ' Porção de 80g (3 unidades), Valor energético: 596 kcal, Carboidratos: 8g, Proteínas: 9,6g, Gorduras totais: 7,9g, Gorduras Saturadas: 3,5g, Gorduras trans: 0,3g, Fibra alimentar: 17g, Sódio: 598mg ' },
-  { src: f04, name: 'Mac and Cheese', price: 9.99, description: ' Porção de 350g (1 unidade), Valor energético: 720 kcal, Carboidratos: 92g, Proteínas: 18g, Gorduras totais: 29g, Gorduras Saturadas: 18g, Gorduras trans: 0g, Fibra alimentar: 1g, Sódio: 1198mg ' },
-  { src: f05, name: 'pizza 4 Queijos', price: 10.99, description: ' Porção 300g (½ unidade), Valor energético:389 kcal, Carboidratos: 36g, Proteínas: 24g, Gorduras totais: 17g, Gorduras Saturadas: 7,1g, Gorduras trans: 0g, Fibra alimentar: 3g, Sódio: 774mg ' },
-  { src: f06, name: 'Big chicken queijo', price: 9.99, description: ' Porção 300g (½ unidade), Valor energético: 283 kcal, Carboidratos: 16g, Proteínas: 20g, Gorduras totais: 4g, Gorduras Saturadas: 1,1g, Gorduras trans: 0g, Fibra alimentar: 2g, Sódio: 920mg ' },
-  { src: f07, name: 'Hamburguer', price: 18.99, description: ' Porção 300g (½ unidade), Valor energético: 283 kcal, Carboidratos: 16g, Proteínas: 20g, Gorduras totais: 4g, Gorduras Saturadas: 1,1g, Gorduras trans: 0g, Fibra alimentar: 2g, Sódio: 920mg ' },
-  { src: f08, name: 'Linguiça toscana com pimenta biquinho', price: 11.99, description: ' Porção 50g (1/2 unidades), Valor energético: 117 kcal, Carboidratos: 1,6g, Proteínas: 7,5g, Gorduras totais: 2,7g, Gorduras Saturadas: 2,0g, Gorduras trans: 0g, Fibra alimentar: 2g, Sódio: 440mg ' },
-  { src: f09, name: 'Linguiça toscana com queijo coalho', price: 10.99, description: ' Porção 50g (1/2 unidades), Valor energético: 117 kcal, Carboidratos: 1,6g, Proteínas: 7,5g, Gorduras totais: 2,7g, Gorduras Saturadas: 2,0g, Gorduras trans: 0g, Fibra alimentar: 2g, Sódio: 440mg ' },
-];
+import imagens from '../object/ImageImport';
 
 const Menu = () => {
-  const [searchValue, setSearchValue] = useState(''); // Estado para armazenar o valor de pesquisa
+  const [searchValue, setSearchValue] = useState('');
   const [showSecondGrid, setShowSecondGrid] = useState(false);
-  const [quantidades, setQuantidades] = useState({}); // Definindo o estado das quantidades
+  const [quantidades, setQuantidades] = useState({});
   const [selectedPizza, setSelectedPizza] = useState(null);
 
   const handleSearchChange = (event) => {
@@ -38,7 +17,7 @@ const Menu = () => {
   };
 
   const handleImageClick = (index) => {
-    const filteredImages = initialImages.filter((image) =>
+    const filteredImages = imagens.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
     const selectedImageIndex = showSecondGrid ? index + 6 : index;
@@ -50,7 +29,7 @@ const Menu = () => {
   };
 
   const handleQuantityIncrement = (index) => {
-    const filteredImages = initialImages.filter((image) =>
+    const filteredImages = imagens.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
     const selectedImageIndex = showSecondGrid ? index + 6 : index;
@@ -62,7 +41,7 @@ const Menu = () => {
   };
 
   const handleQuantityDecrement = (index) => {
-    const filteredImages = initialImages.filter((image) =>
+    const filteredImages = imagens.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
     const selectedImageIndex = showSecondGrid ? index + 6 : index;
@@ -74,23 +53,22 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    // Definir as quantidades iniciais de acordo com o estado initialImages
     const initialQuantidades = {};
-    initialImages.forEach((image) => {
+    imagens.forEach((image) => {
       initialQuantidades[image.name] = 0;
     });
     setQuantidades(initialQuantidades);
   }, []);
 
   const handleRatingChange = (index, newRating) => {
-    const updatedImages = [...initialImages];
+    const updatedImages = [...imagens];
     updatedImages[index].rating = newRating;
     // eslint-disable-next-line no-undef
     setImages(updatedImages);
   };
 
   const renderImages = () => {
-    const filteredImages = initialImages.filter((image) =>
+    const filteredImages = imagens.filter((image) =>
       image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
 
@@ -167,7 +145,6 @@ const Menu = () => {
   };
 
   const handleCloseModal = () => {
-    // Quando o usuário fechar o modal, definimos a pizza selecionada como nula
     setSelectedPizza(null);
   };
 
@@ -176,8 +153,6 @@ const Menu = () => {
       <>
       <div className='flavor'>
         <div className="menu-container">
-            {/* <h2 className="menu-title">Escolha sua Lil Pizza</h2> */}
-            {/* Adicione o campo de entrada (input) para pesquisa */}
             <input
               type="text"
               value={searchValue}
@@ -200,7 +175,7 @@ const Menu = () => {
         </div>
       <div className='transparent'>ooooooooooooooooooooooooo</div>
       </div>
-        <Cart listaDeItens={initialImages} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
+        <Cart listaDeItens={imagens} quantidades={quantidades} handleQuantityIncrement={handleQuantityIncrement} handleQuantityDecrement={handleQuantityDecrement} />
         </>
     </div>
   );
