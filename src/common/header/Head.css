@@ -5,27 +5,14 @@
   color: #fff;
 }
 
-.container {
+
+.container-d_flex  {
   max-width: 90%;
   margin: auto;
-}
-
-.d_flex {
   display: flex;
   justify-content: space-between;
 }
 
-.left-row,
-.right-row-RText {
-  display: flex;
-  align-items: center;
-}
-
-.left-row label,
-.right-row-RText label {
-  margin-right: 30px;
-  font-size: 14px;
-}
 
 /* Estilos para o modo hamburguer */
 .responsive-header .right-row-RText {
@@ -53,7 +40,10 @@
   .right-row-RText label {
     display: none;
   }
+  .head{
+    padding: 5px 0;
 
+  }
   .menu-icon {
     display: block;
   }

@@ -11,7 +11,7 @@ const Head = () => {
   };
 
   return (
-    <section className>
+    <section className="head">
       <div className="container d_flex">
         <div className={`menu-btn ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <div className="menu-btn-burger">
