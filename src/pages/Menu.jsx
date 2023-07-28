@@ -149,7 +149,7 @@ const Menu = () => {
             {showSecondGrid ? 'Outros sabores' : 'Outros sabores'}
           </button>
         </div>
-        <div className='transparent'>ooooooooooooooooooooooooo</div>
+        <div className='transparent'>oooooooooooooooooooooooooooooo</div>
       </div>
       <Cart
         listaDeItens={imagens}
