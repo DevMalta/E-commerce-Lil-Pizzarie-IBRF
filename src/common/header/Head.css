@@ -1,0 +1,82 @@
+/* Estilos para o cabeçalho */
+.head {
+  background-color: #0f3460;
+  padding: 5px 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-row,
+.right-row-RText {
+  display: flex;
+  align-items: center;
+}
+
+.left-row label,
+.right-row-RText label {
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+/* Estilos para o modo hamburguer */
+.responsive-header .right-row-RText {
+  justify-content: flex-end;
+}
+
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.header-menu {
+  display: none;
+}
+
+/* Estilos para os itens do menu */
+.header-menu label {
+  margin-bottom: 10px;
+}
+
+/* Estilos específicos para telas menores que 768px */
+@media (max-width: 768px) {
+  .left-row label,
+  .right-row-RText label {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .right-row-RText {
+    align-items: center;
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f3460; /* Cor de fundo para o menu */
+    padding: 10px;
+    position: absolute;
+    top: 40px; /* Ajuste a posição vertical conforme necessário */
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-menu label {
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
