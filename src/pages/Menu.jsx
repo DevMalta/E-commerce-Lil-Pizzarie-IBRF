@@ -98,8 +98,8 @@ const Menu = () => {
                 />
                 <div className="product-info">
                   <div className="product-name">{image.name}</div>
-                  <div className="product-price">{image.price}</div>
-                  <div className="product-description">{image.description}</div>
+                  <div className="product-price">R$ {image.price}</div>
+                  <div className="product-description">{image.size}</div>
                   <div className="product-buttons">
                     <button className="quantity-button minus" onClick={() => handleQuantityDecrement(image)}>-</button>
                     <span className="quantity">{quantidades[image.name]}</span>
