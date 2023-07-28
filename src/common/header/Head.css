@@ -1,72 +1,63 @@
-/* Estilos para o cabeçalho */
 .head {
-  background-color: #0f3460;
-  padding: 5px 0;
+  /* background-color: #333; */
   color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+    align-items: center;
 }
 
-
-.container-d_flex  {
-  max-width: 90%;
-  margin: auto;
+.head-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-
-/* Estilos para o modo hamburguer */
-.responsive-header .right-row-RText {
-  justify-content: flex-end;
+.head-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.menu-icon {
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-}
-
-.header-menu {
-  display: none;
-}
-
-/* Estilos para os itens do menu */
-.header-menu label {
+.head-menu li {
   margin-bottom: 10px;
+  margin-left: 38px;
 }
 
-/* Estilos específicos para telas menores que 768px */
-@media (max-width: 768px) {
-  .left-row label,
-  .right-row-RText label {
-    display: none;
-  }
-  .head{
-    padding: 5px 0;
+.head-menu label {
+  margin-left: 8px;
+}
 
-  }
-  .menu-icon {
-    display: block;
-  }
+.head label {
+  margin-right: 100px;
+  font-size: 9px;
+}
 
-  .right-row-RText {
-    align-items: center;
-  }
+.hamburger-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-  .show {
-    display: flex;
-    flex-direction: column;
-    background-color: #0f3460; /* Cor de fundo para o menu */
-    padding: 10px;
-    position: absolute;
-    top: 40px; /* Ajuste a posição vertical conforme necessário */
-    right: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .header-menu label {
-    font-size: 14px;
-    color: #fff;
+/* Estilos para o menu quando o ícone do hamburguer é clicado */
+@media screen and (max-width: 1000px) {
+  /* Estilos para telas com largura inferior a 1000 pixels */
+  .hamburger-icon {
+    display: block; /* Exibe o ícone em telas menores que 1000px */
+    font-size: 1.5rem;
     cursor: pointer;
   }
+  .head-menu {
+    display: none; /* Oculta o menu por padrão em telas menores */
+    background-color: #444;
+    padding: 5px;
+  }
+  .head-menu.show {
+    display: block; /* Exibe o menu quando a classe "show" é aplicada */
+  }
+  .head{
+    justify-content: flex-start;
+    
+  }
 }
-

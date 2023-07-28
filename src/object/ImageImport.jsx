@@ -99,7 +99,7 @@ const imagens = [
     hv: '1198mg '
     },
     {src: f05,
-    name: 'pizza 4 Queijos', 
+    name: 'Pizza 4 Queijos', 
     price: 10.99,
     size: 'Quantidade: 500g',
     info: 'Porção 300g (½ unidade)',
@@ -121,7 +121,7 @@ const imagens = [
     hv: '774mg '
     },
     {src: f06,
-    name: 'Big chicken queijo', 
+    name: 'Big Chicken Queijo', 
     price: 9.99,
     size: 'Quantidade: 500g',
     info: 'Porção 300g (½ unidade)',
@@ -165,7 +165,7 @@ const imagens = [
     hv: '920mg '
     },
     {src: f08,
-    name: 'Linguiça toscana com pimenta biquinho', 
+    name: 'Linguiça Toscana com pimenta biquinho', 
     price: 11.99,
     size: 'Quantidade: 500g',
     info: 'Porção 50g (1/2 unidades)',
@@ -187,7 +187,7 @@ const imagens = [
     hv: '440mg '
     },
     {src: f09,
-    name: 'Linguiça toscana com queijo coalho', 
+    name: 'Linguiça Toscana com queijo coalho', 
     price: 10.99,
     size: 'Quantidade: 500g',
     info: 'Porção 50g (1/2 unidades)',

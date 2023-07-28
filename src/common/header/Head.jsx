@@ -1,45 +1,49 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import "./Head.css";
 
 const Head = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuVisible(!menuVisible);
+  };
+
+  const hideMenu = () => {
+    setMenuVisible(false);
+  };
+
+  const menuStyles = {
+    display: menuVisible ? "block" : "none",
   };
 
   return (
     <section className="head">
-      <div className="container d_flex">
-        <div className={`menu-btn ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <div className="menu-btn-burger">
-          </div>
+      <div className="head-container">
+        <div className="hamburger-icon" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faCircleInfo} />
         </div>
-        <ul className={`menu ${menuOpen ? 'active' : ''}`}>
-
-          <li>
-            <FontAwesomeIcon icon={faPhone} />
-            <label>+88012 3456 7894</label>
-          
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <label>lil_pizzarie@vamonessa.com</label>
-          </li>
-          <li>
-            FAQ's
-          </li>
-          <li>
-          Precisa de Ajuda?
-          </li>
-
-          <li>
-            FAQ's
-          </li>
-        </ul>
       </div>
+      <ul className={`head-menu ${menuVisible ? "show" : ""}`} onClick={hideMenu}>
+        <li>
+          <FontAwesomeIcon icon={faPhone} />
+          <label>+88012 3456 7894</label>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <label>lil_pizzarie@vamonessa.com</label>
+        </li>
+        <li>
+          FAQ's
+        </li>
+        <li>
+          Precisa de Ajuda?
+        </li>
+        <li>
+          FAQ's
+        </li>
+      </ul>
     </section>
   );
 };
