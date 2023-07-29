@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
       <Header />
-        <div style={{ marginTop: '215px' }}>
+        <div style={{ marginTop: '160px' }}>
           <Routes>
             <Route path="/" exact element={<Menu />} />
             <Route path="/about" element={<About />} />

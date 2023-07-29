@@ -130,14 +130,15 @@ const Menu = () => {
     <div className='page1'>
       <div className='flavor'>
         <div className="menu-container">
-          <input
+        <input
             type="text"
             value={searchValue}
             onChange={handleSearchChange}
             placeholder="Pesquisar pizza..."
             className="fixed-search-bar"
-          />
+          /> 
           <div className="menu-grid">
+
             {renderImages()}
             <PizzaModal
               show={!!selectedPizza}

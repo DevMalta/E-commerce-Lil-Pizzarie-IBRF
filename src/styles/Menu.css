@@ -1,5 +1,6 @@
 .fixed-search-bar {
   position: fixed;
+  width: auto;
   top: 113px; /* Define a posição no topo da tela */
   left: 0; /* Define a posição na extremidade esquerda da tela */
   right: 0; /* Define a posição na extremidade direita da tela */
