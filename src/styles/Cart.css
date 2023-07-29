@@ -102,3 +102,9 @@ justify-items: center;
   margin: 1px;
   color: black;
 }
+
+@media (max-width: 1000px) {
+  .cart-container{
+  display: none;
+  }
+}

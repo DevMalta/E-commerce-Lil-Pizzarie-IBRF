@@ -19,7 +19,11 @@
   color: #fff;
 
 }
-
+@media (max-width: 1000px) {
+  .transparent {
+  display: none;
+  }
+}
 .row {
     margin-top: 20px;
     width: 95%;
