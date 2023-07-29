@@ -21,14 +21,7 @@ const Login = () => {
     event.preventDefault();
     console.log('Email:', email);
     console.log('Password:', password);
-
-    // Aqui você pode adicionar a lógica para autenticar o usuário com o email e senha fornecidos
-    // Por exemplo, fazer uma chamada a um serviço de autenticação ou verificar em um banco de dados
-    // Suponha que a autenticação seja bem-sucedida
     setLoggedIn(true);
-
-    // Redirecionar para a página do usuário após o login bem-sucedido
-    // navigate('/user');
     alert ('Login efetuado com sucesso')
   };
 
