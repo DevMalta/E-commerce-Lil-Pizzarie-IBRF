@@ -33,3 +33,7 @@
     /* max-width: px; Defina um tamanho máximo para a imagem, se preferir */
     height: auto; /* Mantenha a proporção original da imagem */
   }
+
+  .product-rating, .quantity-rating, .average-rating {
+    margin-bottom: 0;
+  }

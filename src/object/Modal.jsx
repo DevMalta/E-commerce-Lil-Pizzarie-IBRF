@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import StarRating from './StarRating';
 import '../styles/Modal.css';
 
 const PizzaModal = ({ show, onHide, pizza }) => {
+  const [ratings, setRatings] = useState({});
   if (!pizza) return null;
 
   const modalStyle = {
@@ -19,8 +20,19 @@ const PizzaModal = ({ show, onHide, pizza }) => {
   };
 
   const handleRatingChange = (newRating) => {
+    setRatings((prevRatings) => ({
+      ...prevRatings,
+      [pizza.id]: {
+        total: (prevRatings[pizza.id]?.total || 0) + newRating,
+        count: (prevRatings[pizza.id]?.count || 0) + 1,
+      },
+    }));
     console.log('Nova classificação:', newRating);
   };
+
+  const pizzaRating = ratings[pizza.id];
+  const averageRating = pizzaRating ? pizzaRating.total / pizzaRating.count : 0;
+
 
   return (
     <Modal show={show} onHide={onHide} className='custom-modal'>
@@ -29,19 +41,16 @@ const PizzaModal = ({ show, onHide, pizza }) => {
       </Modal.Header>
       <Modal.Body className='custom-modal-body'>
         <div style={modalStyle} className='modal_body'>
-        <p>Informações nutricionais {pizza.info}</p>
-        <div className='image-info-container'>
+          <p>Informações nutricionais {pizza.info}</p>
+          <div className='image-info-container'>
             <div>
-            <img
-              src={pizza.src}
-              alt={pizza.name}
-              style={imageStyle}
-              className="pizza-image"
-            />
-            <p>R$ {pizza.price}</p>
-            <div className="product-rating">
-              <StarRating initialValue={pizza.rating} onChange={(newRating) => handleRatingChange(newRating)} />
-            </div>
+              <img src={pizza.src} alt={pizza.name} style={imageStyle} className="pizza-image" />
+              <p>R$ {pizza.price}</p>
+              <div className="product-rating">
+                <StarRating initialValue={pizza.rating} onChange={(newRating) => handleRatingChange(newRating)} />
+              </div>
+              <p className='quantity-rating'>Avaliações: {pizzaRating ? pizzaRating.count : 0}</p>
+              <p className='average-rating'>Média das avaliações: {averageRating.toFixed(1)}</p>
             </div>
             <div className="info-container">
               <table className='infoNutricional'>

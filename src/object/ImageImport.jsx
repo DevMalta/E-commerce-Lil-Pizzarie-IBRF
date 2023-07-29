@@ -9,7 +9,9 @@ import f08 from '../img/Linguiça toscana com pimenta biquinho.png';
 import f09 from '../img/Linguiça toscana com queijo coalho.png';
 
 const imagens = [
-    { src: f01,
+    { 
+    id: 'f1',
+    src: f01,
     name: 'Lasanha Bolonhesa', 
     price: 15.99,
     size: 'Quantidade: 500g',
@@ -30,9 +32,10 @@ const imagens = [
     gv: '3g',
     ht: 'Sódio:',
     hv: '774mg '
-
     },
-    {src: f02,
+    {
+    id: 'f2',
+    src: f02,
     name: 'Lasanha Peito de Peru', 
     price: 14.99,
     size: 'Quantidade: 500g',
@@ -54,7 +57,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '786mg '
     },
-    {src: f03,
+    {
+    id: 'f3',
+    src: f03,
     name: 'Almondegas de Carne', 
     price: 11.99,
     size: 'Quantidade: 500g',
@@ -76,7 +81,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '598mg '
     },
-    {src: f04,
+    {
+    id: 'f4',
+    src: f04,
     name: 'Mac and Cheese', 
     price: 9.99,
     size: 'Quantidade: 500g',
@@ -98,7 +105,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '1198mg '
     },
-    {src: f05,
+    {
+    id: 'f5',
+    src: f05,
     name: 'Pizza 4 Queijos', 
     price: 10.99,
     size: 'Quantidade: 500g',
@@ -120,7 +129,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '774mg '
     },
-    {src: f06,
+    {
+    id: 'f6',
+    src: f06,
     name: 'Big Chicken Queijo', 
     price: 9.99,
     size: 'Quantidade: 500g',
@@ -142,7 +153,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '920mg '
     },
-    {src: f07,
+    {
+    id: 'f7',
+    src: f07,
     name: 'Hamburguer', 
     price: 18.99,
     size: 'Quantidade: 500g',
@@ -164,7 +177,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '920mg '
     },
-    {src: f08,
+    {
+    id: 'f8',
+    src: f08,
     name: 'Linguiça Toscana com pimenta biquinho', 
     price: 11.99,
     size: 'Quantidade: 500g',
@@ -186,7 +201,9 @@ const imagens = [
     ht: 'Sódio:',
     hv: '440mg '
     },
-    {src: f09,
+    {
+    id: 'f9',
+    src: f09,
     name: 'Linguiça Toscana com queijo coalho', 
     price: 10.99,
     size: 'Quantidade: 500g',
