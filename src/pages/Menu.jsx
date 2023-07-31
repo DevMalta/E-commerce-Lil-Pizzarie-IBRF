@@ -5,6 +5,7 @@ import '../styles/Menu.css';
 import Cart from '../object/Cart';
 import PizzaModal from '../object/Modal';
 import imagens from '../object/ImageImport';
+import CartModal from '../object/CartModal';
 
 const Menu = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -118,6 +119,17 @@ const Menu = () => {
     return grid;
   };
 
+  // ----------------
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  // ------------------------------------
   const handleToggleGrid = () => {
     setShowSecondGrid(!showSecondGrid);
   };
@@ -130,6 +142,22 @@ const Menu = () => {
     <div className='page1'>
       <div className='flavor'>
         <div className="menu-container">
+        <div className='Cart-Icon-Modal'>
+        
+          
+                  <h1>Modal React</h1>
+                  <button onClick={openModal}>Abrir Modal</button>
+
+                  <CartModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+                    <h2>Conteúdo do Modal</h2>
+                    
+                    
+                    <p>Este é um modal simples em um aplicativo React!</p>
+                    {/* <button onClick={closeModal}>Fechar Modal</button> */}
+                  </CartModal>
+    
+    
+      </div>
         <input
             type="text"
             value={searchValue}
@@ -152,6 +180,7 @@ const Menu = () => {
         </div>
         <div className='transparent'>oooooooooooooooooooooooooooooo</div>
       </div>
+    
       <Cart
         listaDeItens={imagens}
         quantidades={quantidades}
