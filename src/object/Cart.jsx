@@ -60,7 +60,7 @@ const Cart = ({
         <strong>Total:</strong> $ {formatarValor(valorTotal)}
       </div>
       <button className="finalizar-compra-button" onClick={handleFinalizarCompra}>
-        <Link to="/pagamento">
+        <Link to="/Address">
           Finalizar Compra
         </Link>
       </button>

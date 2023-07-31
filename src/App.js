@@ -7,6 +7,7 @@ import Header from "./common/header/Header"
 import LoginPage from './pages/LoginPage';
 import PaymentPage from './pages/PaymentPage';
 import Menu from "./pages/Menu";
+import Address from './pages/AddressForm'
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contato" element={<Contato />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/Menu" element={<Menu />} />
+            <Route path="/Address" element={<Address />} />
             <Route path="/pagamento" element={<PaymentPage/>} />
           </Routes>
         </div>
