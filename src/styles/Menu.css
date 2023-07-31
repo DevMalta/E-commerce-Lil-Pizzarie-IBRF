@@ -19,11 +19,7 @@
   color: #fff;
 
 }
-@media (max-width: 1000px) {
-  .transparent {
-  display: none;
-  }
-}
+
 .row {
     margin-top: 20px;
     width: 95%;
@@ -135,10 +131,12 @@
   }
     
     /* Estilos responsivos */
-    @media (max-width: 768px) {
-      /* .fixed-search-bar {
-        top: 150px;
-      } */
+
+    @media (max-width: 767px) {
+      .transparent {
+      display: none;
+      }
+
       .menu-container {
         padding: 10px;
       }

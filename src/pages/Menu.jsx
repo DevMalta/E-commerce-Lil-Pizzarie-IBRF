@@ -6,12 +6,16 @@ import Cart from '../object/Cart';
 import PizzaModal from '../object/Modal';
 import imagens from '../object/ImageImport';
 import CartModal from '../object/CartModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [searchValue, setSearchValue] = useState('');
   const [showSecondGrid, setShowSecondGrid] = useState(false);
   const [quantidades, setQuantidades] = useState({});
   const [selectedPizza, setSelectedPizza] = useState(null);
+  const [isResponsive, setIsResponsive] = useState(false);
 
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
@@ -44,11 +48,22 @@ const Menu = () => {
       initialQuantidades[image.name] = 0;
     });
     setQuantidades(initialQuantidades);
+
+    const handleResize = () => {
+      setIsResponsive(window.innerWidth <= 767);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const renderImages = () => {
-    const filteredImages = imagens.filter((image) =>
-      image.name.toLowerCase().includes(searchValue.toLowerCase())
+    const filteredImages = imagens.filter(
+      (image) => image.name.toLowerCase().includes(searchValue.toLowerCase())
     );
 
     const grid = [];
@@ -72,9 +87,19 @@ const Menu = () => {
                   <div className="product-price">{image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-buttons">
-                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(image)}>-</button>
+                    <button
+                      className="quantity-button minus"
+                      onClick={() => handleQuantityDecrement(image)}
+                    >
+                      -
+                    </button>
                     <span className="quantity">{quantidades[image.name]}</span>
-                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(image)}>+</button>
+                    <button
+                      className="quantity-button plus"
+                      onClick={() => handleQuantityIncrement(image)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
@@ -102,9 +127,19 @@ const Menu = () => {
                   <div className="product-price">R$ {image.price}</div>
                   <div className="product-description">{image.size}</div>
                   <div className="product-buttons">
-                    <button className="quantity-button minus" onClick={() => handleQuantityDecrement(image)}>-</button>
+                    <button
+                      className="quantity-button minus"
+                      onClick={() => handleQuantityDecrement(image)}
+                    >
+                      -
+                    </button>
                     <span className="quantity">{quantidades[image.name]}</span>
-                    <button className="quantity-button plus" onClick={() => handleQuantityIncrement(image)}>+</button>
+                    <button
+                      className="quantity-button plus"
+                      onClick={() => handleQuantityIncrement(image)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
@@ -119,17 +154,6 @@ const Menu = () => {
     return grid;
   };
 
-  // ----------------
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-  // ------------------------------------
   const handleToggleGrid = () => {
     setShowSecondGrid(!showSecondGrid);
   };
@@ -142,31 +166,14 @@ const Menu = () => {
     <div className='page1'>
       <div className='flavor'>
         <div className="menu-container">
-        <div className='Cart-Icon-Modal'>
-        
-          
-                  <h1>Modal React</h1>
-                  <button onClick={openModal}>Abrir Modal</button>
-
-                  <CartModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-                    <h2>Conteúdo do Modal</h2>
-                    
-                    
-                    <p>Este é um modal simples em um aplicativo React!</p>
-                    {/* <button onClick={closeModal}>Fechar Modal</button> */}
-                  </CartModal>
-    
-    
-      </div>
-        <input
+          <input
             type="text"
             value={searchValue}
             onChange={handleSearchChange}
             placeholder="Pesquisar pizza..."
             className="fixed-search-bar"
-          /> 
+          />
           <div className="menu-grid">
-
             {renderImages()}
             <PizzaModal
               show={!!selectedPizza}
@@ -179,14 +186,28 @@ const Menu = () => {
           </button>
         </div>
         <div className='transparent'>oooooooooooooooooooooooooooooo</div>
+        
+
+        
+        {isResponsive &&
+         <div className="payment-icon">
+             <div>
+             <Link to='/pagamento'>
+              
+             <FontAwesomeIcon icon={faCartShopping} />
+             </Link>
+             </div>
+         </div>}
       </div>
-    
-      <Cart
-        listaDeItens={imagens}
-        quantidades={quantidades}
-        handleQuantityIncrement={handleQuantityIncrement}
-        handleQuantityDecrement={handleQuantityDecrement}
-      />
+
+      {!isResponsive && (
+        <Cart
+          listaDeItens={imagens}
+          quantidades={quantidades}
+          handleQuantityIncrement={handleQuantityIncrement}
+          handleQuantityDecrement={handleQuantityDecrement}
+        />
+      )}
     </div>
   );
 };

@@ -103,7 +103,7 @@ justify-items: center;
   color: black;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   .cart-container{
   display: none;
   }

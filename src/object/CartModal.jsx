@@ -29,23 +29,8 @@ const CartModal = ({ isOpen, onRequestClose, children }) => {
       onRequestClose={onRequestClose}
       style={customStyles}
       contentLabel="Example Modal"
-    >
-      <div className="modal-container">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h2 className="modal-title">Modal Title</h2>
-            <button className="close-button" onClick={onRequestClose}>
-              &times;
-            </button>
-          </div>
-          <div className="modal-body">{children}</div>
-          <div className="modal-footer">
-            <button className="close-button" onClick={onRequestClose}>
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
+    >     
+    <div className="modal-body">{children}</div>
     </Modal>
   );
 };
