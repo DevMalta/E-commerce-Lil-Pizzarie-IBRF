@@ -33,3 +33,7 @@
     margin-top: 20px;
   }
   
+.address-result a{
+color: #ffffff;
+text-decoration: none;
+}

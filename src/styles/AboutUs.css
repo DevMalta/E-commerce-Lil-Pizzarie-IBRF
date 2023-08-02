@@ -1,12 +1,23 @@
+.about-us-page{
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+.about-us-page h1{
+  margin-bottom: 50px;
+  
+}
+
 .about-us-container {
  display: flex;
  justify-content:space-around;
+ text-align: justify;
 }
 
 .project-container{
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
@@ -15,7 +26,8 @@
 
 .objetivos-container{
   display: flex;
-  border: 2px solid green;
+  /* border: 2px solid green; */
+  margin-bottom: 50px;
 
 }
 
@@ -23,7 +35,7 @@
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 
 }
 .dev-container{
@@ -31,11 +43,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 70px;
-  border: 2px solid blue;
+  gap: 30px;
+  /* border: 2px solid blue; */
 
 }
 
+.group-dev{
+  justify-self: center;
+  text-align: center;
+}
+.group-off{
+  justify-self: center;
+  text-align: center;
+}
+.group-off img{
+  filter: grayscale(100%);
+}
 .circle {
   border-radius: 50%;
   overflow: hidden;
@@ -47,9 +70,25 @@
   width: 100%;
 }
 
+.orientadores{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
 .patrocinio-container{
-  width: 30%;
-  padding-left: 5%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  
   padding-right: 5%;
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
+  text-align: center;
+}
+
+.patrocinio-container img{
+  height: auto;
+  width: 100px;
+  margin-bottom: 40px;
 }
