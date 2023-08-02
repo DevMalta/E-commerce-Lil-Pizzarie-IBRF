@@ -2,7 +2,7 @@ footer {
     background-color: #0f3460;
     padding: 10px 0;
     color: #fff;
-    bottom: 0 auto;
+    bottom: 0;
   }
   footer h1 {
     margin-bottom: 30px;

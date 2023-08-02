@@ -1,25 +1,55 @@
 .about-us-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .forno-image {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .about-us-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .about-us-description {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
+ display: flex;
+ justify-content:space-around;
+}
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+}
+
+.objetivos-container{
+  display: flex;
+  border: 2px solid green;
+
+}
+
+.objetivos {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 2px solid yellow;
+
+}
+.dev-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 70px;
+  border: 2px solid blue;
+
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  justify-self: center;
+}
+.circle img {
+  width: 100%;
+}
+
+.patrocinio-container{
+  width: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 2px solid brown;
+}
