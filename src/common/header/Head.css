@@ -1,10 +1,9 @@
 .head {
-  /* background-color: #333; */
   color: #fff;
   padding: 5px;
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 .head-container {
@@ -31,7 +30,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .head label {
   margin-right: 100px;
   font-size: 9px;
@@ -43,16 +41,24 @@
   cursor: pointer;
 }
 
-/* Estilos para o menu quando o ícone do hamburguer é clicado */
-@media screen and (max-width: 1000px) {
-  /* Estilos para telas com largura inferior a 1000 pixels */
+@media screen and (min-width: 768px) {
+.cart-icon {
+  display: none;
+}
+}
+
+@media screen and (max-width: 950px) {
+  .cart-icon {
+    display: true;
+  }
+
   .hamburger-icon {
-    display: block; /* Exibe o ícone em telas menores que 1000px */
+    display: block;
     font-size: 1.5rem;
     cursor: pointer;
   }
   .head-menu {
-    display: none; /* Oculta o menu por padrão em telas menores */
+    display: none;
     background-color: #444;
     padding: 5px;
   }
@@ -62,7 +68,6 @@
     top: 160px;
   }
   .head{
-    justify-content: flex-start;
-    
+    justify-content: flex-start;    
   }
 }

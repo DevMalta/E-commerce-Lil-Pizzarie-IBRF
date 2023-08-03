@@ -7,22 +7,16 @@ import Navbar from "./Navbar";
 import Cart from "../../object/Cart";
 import CartModal from "../../object/CartModal";
 import imagens from "../../object/ImageImport";
-// import Cart from '../../object/Cart'; // Substitua o caminho pelo caminho correto para o arquivo Cart.jsx
-// import CartModal from "../../object/CartModal";
-// import imagens from "../../object/ImageImport"
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  // Utilize a lista de itens importada do arquivo ImageImport.jsx
   const listaDeItens = imagens;
 
   const [quantidades, setQuantidades] = useState({});
 
-  // Filtra a lista de itens para exibir apenas os itens que têm quantidade selecionada maior que 0
   const listaDeItensComQuantidadeSelecionada = listaDeItens.filter((item) => quantidades[item.name]);
-
 
   const handleQuantityIncrement = (item) => {
     setQuantidades((prevQuantidades) => ({
@@ -70,9 +64,11 @@ const Search = () => {
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             </div>
-
-              <FontAwesomeIcon icon={faCartShopping} />
-
+            <div className="cart-icon">
+              <Link to='/Address'>
+               <FontAwesomeIcon icon={faCartShopping} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

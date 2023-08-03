@@ -41,11 +41,26 @@
 .dev-container{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 30px;
-  /* border: 2px solid blue; */
+  gap: 10px;
+  }
 
+.obj-tools {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.icone {
+  width:35px;
 }
 
 .group-dev{

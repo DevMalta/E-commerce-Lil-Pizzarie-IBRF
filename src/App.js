@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import PaymentPage from './pages/PaymentPage';
 import Menu from "./pages/Menu";
 import Address from './pages/AddressForm'
+import Cart from './object/Cart';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/Menu" element={<Menu />} />
             <Route path="/Address" element={<Address />} />
             <Route path="/pagamento" element={<PaymentPage/>} />
+            <Route path="/Cart" element={<Cart/>} />
           </Routes>
         </div>
         <Footer />

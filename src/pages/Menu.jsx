@@ -5,9 +5,8 @@ import '../styles/Menu.css';
 import Cart from '../object/Cart';
 import PizzaModal from '../object/Modal';
 import imagens from '../object/ImageImport';
-import CartModal from '../object/CartModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -84,7 +83,7 @@ const Menu = () => {
                 />
                 <div className="product-info">
                   <div className="product-name">{image.name}</div>
-                  <div className="product-price">{image.price}</div>
+                  <div className="product-price">R$ {image.price}</div>
                   <div className="product-description">{image.description}</div>
                   <div className="product-buttons">
                     <button
@@ -182,22 +181,10 @@ const Menu = () => {
             />
           </div>
           <button className="toggle-button" onClick={handleToggleGrid}>
-            {showSecondGrid ? 'Outros sabores' : 'Outros sabores'}
+            {showSecondGrid ? 'Pagina 1 <' : 'Pagina 2 >'}
           </button>
         </div>
         <div className='transparent'>oooooooooooooooooooooooooooooo</div>
-        
-
-        
-        {isResponsive &&
-         <div className="payment-icon">
-             <div>
-             <Link to='/pagamento'>
-              
-             <FontAwesomeIcon icon={faCartShopping} />
-             </Link>
-             </div>
-         </div>}
       </div>
 
       {!isResponsive && (

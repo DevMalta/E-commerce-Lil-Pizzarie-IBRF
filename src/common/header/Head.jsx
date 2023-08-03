@@ -14,9 +14,6 @@ const Head = () => {
     setMenuVisible(false);
   };
 
-  const menuStyles = {
-    display: menuVisible ? "block" : "none",
-  };
 
   return (
     <section className="head">
@@ -40,13 +37,9 @@ const Head = () => {
         <li>
           Precisa de Ajuda?
         </li>
-        <li>
-          FAQ's
-        </li>
-      </ul>
+        </ul>
     </section>
   );
 };
-
 
 export default Head;

@@ -1,6 +1,7 @@
 .fixed-search-bar {
   position: fixed;
   width: auto;
+  margin-right: 260px;
   top: 113px; /* Define a posição no topo da tela */
   left: 0; /* Define a posição na extremidade esquerda da tela */
   right: 0; /* Define a posição na extremidade direita da tela */
@@ -21,7 +22,7 @@
 }
 
 .row {
-    margin-top: 20px;
+    margin-top: 45px;
     width: 95%;
     padding-left: 5%;
     /* padding-right: 5%; */
@@ -51,6 +52,7 @@
   }
   
   .menu-grid {
+ 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -133,6 +135,10 @@
     /* Estilos responsivos */
 
     @media (max-width: 767px) {
+      .fixed-search-bar {
+        margin-right: 0px;
+      }
+
       .transparent {
       display: none;
       }
