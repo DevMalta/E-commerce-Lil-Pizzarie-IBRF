@@ -21,7 +21,7 @@
   }
   
   .address-form button {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -40,4 +40,10 @@ text-decoration: none;
 
 .address-form h2 {
   margin-bottom: 35px;
+}
+
+@media (max-width: 950px) {
+  .address-form {
+    margin-bottom: 173px;
+  }
 }

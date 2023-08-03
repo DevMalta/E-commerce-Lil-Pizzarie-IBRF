@@ -54,3 +54,8 @@
     }
   }
   
+  @media screen and (max-width: 985px) {
+    .payment-details{
+      margin-bottom: 130px;
+    }
+  }
