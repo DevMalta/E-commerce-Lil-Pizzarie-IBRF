@@ -25,6 +25,7 @@ import iGpt from '../img/iGpt.png';
 import iFont from '../img/iFont.webp';
 import iPer from '../img/iPer.webp';
 import iW3 from '../img/iW3.svg';
+import commit from '../img/commits.jpeg';
 
 
 const AboutUs = () => {
@@ -177,6 +178,13 @@ const AboutUs = () => {
               </ul>
             </tr>
             </div>
+
+             
+          </div>
+          <hr />
+          <div>
+            <h2>Ao todo foram 71 commits</h2>
+          <img src={commit} alt='commit' className='commit'/>
           </div>
 
         </div>
