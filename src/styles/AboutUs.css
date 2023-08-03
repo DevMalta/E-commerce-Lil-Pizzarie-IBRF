@@ -5,7 +5,12 @@
 }
 .about-us-page h1{
   margin-bottom: 50px;
-  
+}
+
+.vertical-line {
+  border-left: 1px solid rgb(170, 170, 170);
+  height: auto;
+  margin: 0 10px;
 }
 
 .about-us-container {
@@ -46,6 +51,11 @@
   gap: 10px;
   }
 
+.func-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .obj-tools {
   margin-bottom: 50px;
   display: flex;
@@ -53,8 +63,9 @@
 }
 
 .tools {
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 150px);
+  grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
 }
@@ -102,8 +113,18 @@
   text-align: center;
 }
 
+.icon-patrocinadores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .patrocinio-container img{
   height: auto;
   width: 100px;
   margin-bottom: 40px;
+}
+
+.about-us-page h2 {
+  margin-bottom: 25px;
 }

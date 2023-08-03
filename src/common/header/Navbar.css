@@ -65,7 +65,7 @@
 }
 
 /* Media Query for Responsive Navbar */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .menu {
     display: none;
   }

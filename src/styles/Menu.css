@@ -134,7 +134,7 @@
     
     /* Estilos responsivos */
 
-    @media (max-width: 767px) {
+    @media (max-width: 950px) {
       .fixed-search-bar {
         margin-right: 0px;
       }
