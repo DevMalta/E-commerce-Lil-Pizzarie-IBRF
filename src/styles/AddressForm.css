@@ -37,3 +37,7 @@
 color: #ffffff;
 text-decoration: none;
 }
+
+.address-form h2 {
+  margin-bottom: 35px;
+}

@@ -5,7 +5,7 @@ import '../styles/PaymentPage.css'; // Importe o arquivo CSS para estilização
 import CheckoutBox from '../object/CheckOut';
 
 const PaymentPage = () => {
-  const totalValue = 100.5;
+  const totalValue = 47.96
   const [selectedPayment, setSelectedPayment] = useState(null);
 
   // Função para renderizar o conteúdo do componente selecionado

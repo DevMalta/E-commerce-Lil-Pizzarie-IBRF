@@ -46,6 +46,7 @@ const AddressForm = () => {
 
   return (
     <div className="address-form">
+      <h2>Endereço de entrega</h2>
       <label htmlFor="cep">CEP:</label>
       <input
         type="text"
