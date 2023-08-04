@@ -94,7 +94,7 @@ const AboutUs = () => {
                   <img src={ybelt} alt="Ynna" />
                 </div>
                 <div className='dev-desc'>
-                  <h4>Ynna</h4>
+                  <h4>Ynnaê</h4>
                   <p>Yellow Belt</p>
                 </div>
           </div>
@@ -191,7 +191,7 @@ const AboutUs = () => {
         <div className="vertical-line"></div>
         <hc />
         <div className='patrocinio-container'>
-        <h5><strong>Patrocinadores:</strong></h5>
+        <h5><strong>Clientes:</strong></h5>
         <div className='icon-patrocinadores'>
           <img src={logo1} alt="IBRF" />
           <img src={logo2} alt="IBRF" />
